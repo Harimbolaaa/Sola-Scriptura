@@ -1,0 +1,1906 @@
+# MASTER PROMPT — SOLA SCRIPTURA : MAÏEUTIQUE
+
+## 1. RÔLE ET MISSION
+
+Tu es une équipe de développement logiciel composée de :
+
+- Un architecte logiciel Android Senior.
+- Un développeur Kotlin Senior.
+- Un expert Jetpack Compose et Material Design 3.
+- Un architecte Clean Architecture et MVVM.
+- Un expert Appwrite Cloud.
+- Un ingénieur spécialisé dans les applications Offline-First.
+- Un concepteur d'expériences pédagogiques et de dialogues socratiques.
+- Un ingénieur QA spécialisé dans les tests Android.
+
+Ta mission est de concevoir et développer une véritable application Android native appelée :
+
+**SOLA SCRIPTURA : MAÏEUTIQUE**
+
+L'application doit permettre aux utilisateurs d'étudier les sujets bibliques en utilisant :
+
+1. La méthode socratique.
+2. L'ironie socratique.
+3. La méthode de réfutation logique (Élenchos).
+4. La maïeutique.
+5. La comparaison des passages bibliques.
+6. Le raisonnement progressif.
+7. La synthèse personnelle.
+
+L'application adopte une perspective théologique adventiste du septième jour, clairement présentée à l'utilisateur.
+
+Cependant, elle doit distinguer systématiquement :
+- Le texte biblique.
+- Le contexte historique et littéraire.
+- L'interprétation proposée.
+- La position doctrinale adventiste.
+- Les opinions personnelles de l'utilisateur.
+
+L'objectif est de permettre à l'utilisateur de réfléchir, examiner les textes, poser des questions et construire sa compréhension sans être forcé d'accepter une réponse.
+
+L'application doit fonctionner sans aucune intelligence artificielle.
+
+Le contenu pédagogique sera préparé extérieurement, éventuellement avec une IA, puis vérifié humainement, exporté en JSON et importé dans le système.
+
+**Le moteur Android ne doit jamais avoir besoin d'une IA pour exécuter une étude.**
+
+---
+
+# 2. CONTRAINTES ABSOLUES DU PROJET
+
+Les contraintes suivantes sont obligatoires.
+
+### 2.1 Technologies imposées
+
+- Langage : Kotlin exclusivement pour le code Android.
+- Interface : Jetpack Compose.
+- Design : Material Design 3.
+- Architecture : MVVM + Clean Architecture.
+- Base locale : Room (SQLite).
+- Sérialisation JSON : Kotlinx Serialization.
+- Préférences : DataStore.
+- Backend : Appwrite Cloud 2.x.
+- SDK Backend : SDK Android officiel Appwrite.
+- Synchronisation : WorkManager.
+- Navigation : Navigation Compose.
+- Programmation asynchrone : Kotlin Coroutines et Flow.
+- Injection de dépendances : Hilt.
+
+Ne remplace aucune technologie sans nécessité technique démontrée.
+
+### 2.2 Interdictions
+
+Il est strictement interdit de :
+
+- Utiliser OpenAI, ChatGPT ou Gemini dans l'application.
+- Ajouter une API de génération de texte.
+- Ajouter un SDK de LLM.
+- Générer des dialogues dynamiquement avec une IA.
+- Nécessiter Internet pour commencer une étude téléchargée.
+- Mélanger directement les appels Appwrite avec les écrans Compose.
+- Stocker les données importantes uniquement dans Appwrite.
+- Mettre une API Key administrateur Appwrite dans l'application.
+- Mettre toute la logique métier dans les ViewModels.
+- Construire des fichiers gigantesques impossibles à maintenir.
+- Utiliser des données fictives comme s'il s'agissait de vraies données bibliques vérifiées.
+- Laisser des fonctions vides ou des implémentations simulées dans les fonctionnalités annoncées comme terminées.
+
+Les données de démonstration doivent être clairement identifiées.
+
+### 2.3 Compatibilité Android
+
+Utiliser :
+
+- minSdk : 24 minimum.
+- compileSdk : version stable compatible avec les outils Android disponibles et le SDK Appwrite retenu.
+- targetSdk : version Android actuellement exigée pour la distribution envisagée.
+- Java/JDK : version compatible avec les versions retenues de Gradle, Kotlin et Android Gradle Plugin.
+
+Le projet doit être compatible avec Android 7.0 et versions ultérieures, sous réserve des contraintes des bibliothèques retenues.
+
+Les appareils peu puissants doivent rester prioritaires dans les choix de performances.
+
+### 2.4 Gestion des versions
+
+Ne pas choisir arbitrairement des versions de dépendances.
+
+Avant le développement :
+
+1. Vérifier les documentations officielles.
+2. Vérifier les versions stables disponibles.
+3. Vérifier la compatibilité entre Kotlin, Compose, Gradle et les plugins.
+4. Vérifier la compatibilité de l'Appwrite Android SDK avec Appwrite Cloud.
+5. Épingler les versions retenues.
+6. Centraliser toutes les dépendances dans `gradle/libs.versions.toml`.
+
+Ne pas utiliser de dépendance expérimentale sans justification.
+
+---
+
+# 3. ARCHITECTURE GÉNÉRALE
+
+Construire une architecture propre, lisible et évolutive.
+
+Commencer avec un seul module Android `app`, mais organiser strictement les packages pour pouvoir extraire ultérieurement des modules Gradle indépendants sans réécrire l'application.
+
+Architecture :
+
+UI → ViewModel → UseCases → Repository → DataSources
+
+Organisation proposée :
+
+```text
+app/
+│
+├── src/main/
+│   │
+│   ├── java/com/harimbola/solascriptura/
+│   │   │
+│   │   ├── app/
+│   │   │   ├── SolaScripturaApp.kt
+│   │   │   ├── MainActivity.kt
+│   │   │   └── Navigation.kt
+│   │   │
+│   │   ├── core/
+│   │   │   ├── common/
+│   │   │   ├── designsystem/
+│   │   │   ├── database/
+│   │   │   ├── datastore/
+│   │   │   ├── network/
+│   │   │   ├── appwrite/
+│   │   │   ├── json/
+│   │   │   ├── sync/
+│   │   │   └── testing/
+│   │   │
+│   │   ├── domain/
+│   │   │   ├── model/
+│   │   │   ├── repository/
+│   │   │   └── usecase/
+│   │   │
+│   │   ├── data/
+│   │   │   ├── local/
+│   │   │   ├── remote/
+│   │   │   ├── mapper/
+│   │   │   └── repository/
+│   │   │
+│   │   ├── feature/
+│   │   │   ├── onboarding/
+│   │   │   ├── home/
+│   │   │   ├── studies/
+│   │   │   ├── dialogue/
+│   │   │   ├── bible/
+│   │   │   ├── truthmap/
+│   │   │   ├── progress/
+│   │   │   ├── notebook/
+│   │   │   ├── dailychallenge/
+│   │   │   ├── account/
+│   │   │   └── settings/
+│   │   │
+│   │   └── di/
+│   │
+│   └── assets/
+│       └── studies/
+│           ├── foundations/
+│           ├── salvation/
+│           ├── forgotten_truths/
+│           └── prophecies/
+│
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradle/
+│   └── libs.versions.toml
+│
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── DATABASE.md
+│   ├── JSON_SCHEMA.md
+│   ├── APPWRITE_SETUP.md
+│   ├── CONTENT_AUTHORING.md
+│   ├── SYNC_RULES.md
+│   └── CHANGELOG.md
+│
+└── README.md
+```
+
+Adapte l'organisation si nécessaire, mais conserve les responsabilités séparées.
+
+### Règles de maintenabilité
+
+1. Une classe doit avoir une responsabilité principale.
+2. Les interfaces des repositories doivent être définies dans Domain.
+3. Les implémentations des repositories doivent être dans Data.
+4. Les ViewModels ne doivent pas contenir les requêtes SQL.
+5. Les ViewModels ne doivent pas appeler directement Appwrite.
+6. Les Composables ne doivent pas contenir la logique métier.
+7. Les modèles réseau doivent être distincts des modèles de domaine.
+8. Les modèles Room doivent être distincts des modèles de présentation.
+9. Les constantes doivent être centralisées.
+10. Les erreurs doivent être représentées par des types explicites.
+11. Les noms doivent être descriptifs.
+12. Les migrations de base doivent être versionnées.
+13. Toute modification du format JSON doit être accompagnée d'une stratégie de compatibilité.
+
+Éviter aussi la surarchitecture : ne créer une abstraction, un module ou un framework interne que lorsqu'il apporte une réelle valeur.
+
+---
+
+# 4. LE MOTEUR SOCRATIQUE : LE CŒUR DE L'APPLICATION
+
+Construire un moteur générique de dialogue.
+
+Il doit pouvoir charger et exécuter différentes études sans qu'il soit nécessaire de modifier le code Kotlin.
+
+Chaque étude est un graphe orienté composé de nœuds et de transitions.
+
+## 4.1 Les quatre phases pédagogiques
+
+### Phase 1 : IRONY
+
+L'application commence par poser une question.
+
+Elle cherche à découvrir ce que l'utilisateur pense déjà.
+
+Exemple :
+
+« Selon ta compréhension actuelle, que se passe-t-il après la mort ? »
+
+L'utilisateur sélectionne ou exprime son point de vue.
+
+Le système ne doit pas le juger.
+
+### Phase 2 : ELENCHUS
+
+L'application présente un passage biblique et demande à l'utilisateur de confronter son idée au texte.
+
+Exemple :
+
+« Examinons maintenant ce que Pierre affirme concernant David. Comment comprends-tu ce passage ? »
+
+L'objectif est de faire apparaître une éventuelle difficulté logique.
+
+### Phase 3 : MAIEUTICS
+
+L'application pose de petites questions progressives.
+
+Chaque réponse permet de franchir une nouvelle étape du raisonnement.
+
+Elle peut utiliser :
+- Oui / Non.
+- Choix multiples.
+- Comparaison de deux affirmations.
+- Association verset et affirmation.
+- Question de réflexion.
+- Remise en ordre d'une argumentation.
+
+### Phase 4 : SYNTHESIS
+
+L'application présente une synthèse du chemin parcouru.
+
+L'utilisateur peut :
+- Lire la synthèse proposée.
+- Examiner les textes utilisés.
+- Écrire sa propre conclusion.
+- Reprendre certaines étapes.
+- Continuer vers une autre étude.
+- Indiquer qu'il n'est toujours pas convaincu.
+
+La synthèse ne doit pas présenter artificiellement une conclusion comme démontrée simplement parce que l'utilisateur a sélectionné une réponse.
+
+## 4.2 Le moteur doit être déterministe
+
+Créer les classes suivantes :
+
+```text
+DialogueEngine
+DialogueGraph
+DialogueNode
+DialogueChoice
+DialogueSession
+DialogueHistory
+DialogueTransition
+DialogueResult
+DialogueValidator
+DialogueProgressManager
+```
+
+Responsabilités :
+
+- `DialogueEngine` : exécuter le dialogue.
+- `DialogueGraph` : représenter l'étude entière.
+- `DialogueNode` : représenter une étape.
+- `DialogueChoice` : représenter une réponse possible.
+- `DialogueSession` : représenter une session de lecture.
+- `DialogueHistory` : enregistrer les étapes parcourues.
+- `DialogueTransition` : déterminer la prochaine étape.
+- `DialogueResult` : représenter la synthèse finale.
+- `DialogueValidator` : vérifier les règles de cohérence.
+- `DialogueProgressManager` : restaurer et sauvegarder la progression.
+
+Le moteur ne doit dépendre ni d'Appwrite ni de l'interface Compose.
+
+La même logique doit être utilisable dans les tests unitaires.
+
+## 4.3 Gestion des réponses
+
+Chaque choix de réponse doit pouvoir :
+
+- Afficher un retour explicatif facultatif.
+- Rediriger vers un nœud.
+- Afficher des versets.
+- Demander un complément de réflexion.
+- Revenir vers une question précédente.
+- Terminer une branche.
+
+Ajouter les possibilités :
+
+- « Je ne suis pas convaincu ».
+- « Je veux examiner le contexte ».
+- « Je souhaite comparer les passages ».
+- « Je préfère revenir à la question précédente ».
+- « Je ne connais pas la réponse ».
+
+Ne jamais bloquer définitivement l'utilisateur sur une réponse.
+
+Prévoir une protection contre les cycles infinis et les parcours anormalement longs.
+
+---
+
+# 5. FORMAT JSON OFFICIEL DES ÉTUDES
+
+Le contenu doit être entièrement indépendant du code de l'application.
+
+Chaque étude doit posséder un fichier JSON propre.
+
+Exemple d'organisation :
+
+```text
+assets/studies/
+
+├── foundations/
+│   ├── bible_fiable_fr.json
+│   ├── creation_fr.json
+│   └── origine_du_mal_fr.json
+│
+├── salvation/
+│   ├── grace_et_foi_fr.json
+│   ├── jesus_christ_fr.json
+│   └── loi_et_grace_fr.json
+│
+├── forgotten_truths/
+│   ├── etat_des_morts_fr.json
+│   ├── sabbat_fr.json
+│   └── sanctuaire_fr.json
+│
+└── prophecies/
+    ├── daniel_2_fr.json
+    ├── daniel_7_fr.json
+    └── apocalypse_13_fr.json
+```
+
+Pour une nouvelle langue, utiliser des fichiers indépendants :
+
+```text
+etat_des_morts_fr.json
+etat_des_morts_mg.json
+etat_des_morts_en.json
+```
+
+## 5.1 Structure JSON obligatoire
+
+Utiliser Kotlinx Serialization.
+
+Créer des modèles typés pour chaque élément.
+
+Voici le contrat de données de base :
+
+```json
+{
+  "schemaVersion": 1,
+  "studyId": "etat_des_morts_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Que se passe-t-il après la mort ?",
+  "subtitle": "Une enquête biblique progressive",
+  "description": "Examine plusieurs textes bibliques sur la mort et la résurrection.",
+  "categoryId": "forgotten_truths",
+  "tags": [
+    "mort",
+    "resurrection",
+    "esperance"
+  ],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 10,
+  "editorialStatus": "REVIEWED",
+  "startNodeId": "node_001",
+
+  "metadata": {
+    "author": "Harimbola",
+    "reviewer": "",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01",
+    "license": "",
+    "bibliography": []
+  },
+
+  "nodes": [
+    {
+      "id": "node_001",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Selon ta compréhension, que se passe-t-il après la mort ?",
+      "contextText": "",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "choice_001",
+          "label": "L'âme continue immédiatement à vivre.",
+          "feedback": "Examinons cette idée à partir des textes bibliques.",
+          "nextNodeId": "node_002"
+        },
+        {
+          "id": "choice_002",
+          "label": "La personne attend la résurrection.",
+          "feedback": "Examinons maintenant les passages qui parlent de la résurrection.",
+          "nextNodeId": "node_003"
+        }
+      ]
+    }
+  ],
+
+  "conclusions": [
+    {
+      "id": "conclusion_001",
+      "title": "Synthèse de l'étude",
+      "summary": "Résumé à rédiger et vérifier.",
+      "reasoningSteps": [],
+      "verseReferences": [],
+      "reflectionQuestion": "Quelle relation vois-tu entre les passages étudiés ?",
+      "relatedStudyIds": []
+    }
+  ]
+}
+```
+
+Cette structure est une base. L'implémentation doit la compléter pour gérer tous les parcours nécessaires.
+
+## 5.2 Champs des nœuds
+
+Prévoir :
+
+- id
+- phase
+- type
+- speakerText
+- contextText
+- instructionalText
+- verseReferences
+- choices
+- conclusionId
+- terminal
+- allowBackNavigation
+- optional metadata
+
+Valeurs possibles pour `phase` :
+
+```kotlin
+enum class DialoguePhase {
+    IRONY,
+    ELENCHUS,
+    MAIEUTICS,
+    SYNTHESIS,
+    REFLECTION
+}
+```
+
+Valeurs possibles pour `type` :
+
+```kotlin
+enum class DialogueNodeType {
+    QUESTION,
+    SCRIPTURE,
+    COMPARISON,
+    REFLECTION,
+    SYNTHESIS,
+    END
+}
+```
+
+Les enums doivent être accompagnés d'une stratégie de compatibilité pour les futures versions du format.
+
+## 5.3 Références bibliques
+
+Ne pas obligatoirement enregistrer le texte biblique complet dans chaque JSON.
+
+Créer une structure réutilisable :
+
+```json
+{
+  "bookId": "ACT",
+  "bookName": "Actes",
+  "chapter": 2,
+  "startVerse": 29,
+  "endVerse": 34,
+  "translationId": "LSG",
+  "quotedText": "",
+  "licenseId": ""
+}
+```
+
+Une référence peut être affichée dans plusieurs études sans dupliquer le même passage.
+
+Respecter les droits de distribution de chaque traduction biblique.
+
+Ne jamais intégrer de traduction protégée sans autorisation ou licence appropriée.
+
+## 5.4 Règles de validation JSON
+
+Créer un validateur obligatoire.
+
+Il doit contrôler :
+
+1. La validité syntaxique JSON.
+2. La présence de `studyId`.
+3. La présence de `schemaVersion`.
+4. L'unicité des identifiants.
+5. L'existence de `startNodeId`.
+6. L'existence de tous les `nextNodeId`.
+7. La validité des phases.
+8. La validité des types.
+9. La validité des références bibliques.
+10. L'existence de chaque conclusion référencée.
+11. La cohérence entre les nœuds terminaux et les transitions.
+12. L'accessibilité des branches depuis le nœud initial.
+13. L'absence de cycles involontaires.
+14. La présence de limites de parcours.
+15. La cohérence de la version du schéma.
+
+Un JSON invalide ne doit jamais remplacer une étude valide déjà installée.
+
+L'importation doit être atomique : validation complète avant activation.
+
+---
+
+# 6. LES FONCTIONNALITÉS DE L'APPLICATION
+
+Développer les fonctionnalités suivantes.
+
+## 6.1 Accueil
+
+L'écran d'accueil doit comporter :
+
+- Un message de bienvenue.
+- La reprise de la dernière étude.
+- La progression générale.
+- Les études recommandées.
+- Le défi biblique du jour.
+- Les nouvelles études téléchargées.
+- Les catégories.
+- Un accès rapide au carnet de réflexion.
+
+Ne pas surcharger l'écran.
+
+L'accueil doit présenter uniquement les informations les plus utiles.
+
+## 6.2 Bibliothèque d'études
+
+Créer une bibliothèque organisée par catégories :
+
+### Saison 1 — Les Fondations
+- La Bible est-elle fiable ?
+- Pourquoi Dieu a-t-il créé le monde ?
+- D'où vient le mal ?
+- Pourquoi Dieu permet-il la souffrance ?
+
+### Saison 2 — Le Plan du Salut
+- Qui est Jésus-Christ ?
+- Qu'est-ce que la grâce ?
+- La foi et les œuvres.
+- La loi et la grâce.
+- La signification de la croix.
+
+### Saison 3 — Les Vérités bibliques
+- Que se passe-t-il après la mort ?
+- Pourquoi le Sabbat ?
+- Le sanctuaire.
+- La résurrection.
+- Le retour de Jésus.
+
+### Saison 4 — Les Prophéties
+- Daniel 2.
+- Daniel 7.
+- Daniel 8.
+- Les 2300 soirs et matins.
+- Apocalypse 12.
+- Apocalypse 13.
+- Les symboles prophétiques.
+
+Les études doivent être ajoutées depuis des JSON et non par modification du code.
+
+## 6.3 Écran de dialogue
+
+Créer une interface de discussion élégante.
+
+Éléments :
+
+- Bulle de dialogue.
+- Indication discrète de la phase.
+- Référence biblique.
+- Carte de verset.
+- Boutons de réponse.
+- Historique du raisonnement.
+- Barre de progression.
+- Bouton précédent.
+- Bouton quitter.
+- Bouton enregistrer pour reprendre plus tard.
+
+Prévoir des animations discrètes et fluides.
+
+L'utilisateur doit pouvoir consulter le contexte d'un verset sans perdre sa position dans le dialogue.
+
+## 6.4 Mode Duel de Versets
+
+Permettre de comparer deux passages bibliques.
+
+Afficher :
+
+- Passage A.
+- Passage B.
+- Contexte des deux passages.
+- Question d'analyse.
+- Champ de réflexion.
+- Synthèse facultative.
+
+Le but est d'encourager l'examen des textes.
+
+## 6.5 Enquête biblique
+
+Créer un mode qui présente une question centrale à résoudre.
+
+Exemple :
+
+« Le septième jour a-t-il une place particulière dans la Bible ? »
+
+L'utilisateur découvre plusieurs indices :
+
+- Genèse.
+- Exode.
+- Évangiles.
+- Actes.
+- Épîtres.
+
+Il doit relier les passages et construire une argumentation.
+
+## 6.6 Arbre de vérité
+
+Créer une représentation visuelle des relations entre les études.
+
+Exemple :
+
+```text
+                  LA CRÉATION
+                       |
+                 LA LOI DE DIEU
+                       |
+                    SABBAT
+                       |
+                SIGNIFICATION
+                 DANS LA BIBLE
+```
+
+L'arbre doit être généré à partir des données des études.
+
+Ne pas coder manuellement chaque arbre.
+
+Prévoir :
+- Zoom.
+- Déplacement.
+- Sélection d'un nœud.
+- Ouverture de l'étude associée.
+- Affichage des relations.
+- Mise en évidence des notions déjà étudiées.
+
+Utiliser une représentation performante adaptée à Android.
+
+## 6.7 Carnet de réflexion
+
+Permettre à l'utilisateur de conserver :
+
+- Ses conclusions.
+- Ses questions.
+- Ses notes personnelles.
+- Les passages importants.
+- Les études favorites.
+- Les difficultés rencontrées.
+
+Toutes les notes doivent être enregistrées localement.
+
+La synchronisation doit être facultative.
+
+## 6.8 Défi quotidien
+
+Créer un défi quotidien déterministe.
+
+Exemple :
+
+« Examine aujourd'hui trois passages qui parlent de la résurrection. »
+
+Le défi doit être choisi à partir du contenu disponible localement.
+
+Ne pas nécessiter Internet.
+
+Ne pas utiliser l'heure serveur pour empêcher l'utilisateur d'accéder au défi hors ligne.
+
+## 6.9 Progression
+
+Afficher :
+
+- Nombre d'études commencées.
+- Nombre d'études terminées.
+- Études en cours.
+- Temps approximatif d'étude.
+- Références bibliques examinées.
+- Notions enregistrées.
+- Parcours complétés.
+
+Ne pas transformer l'application en compétition.
+
+Les récompenses doivent encourager la régularité, pas pousser à accepter une conclusion doctrinale.
+
+---
+
+# 7. PERSONNALISATION COMPLÈTE DE L'INTERFACE
+
+C'est une priorité du projet.
+
+L'application doit être belle dès le premier lancement, mais chaque utilisateur doit pouvoir choisir son apparence.
+
+Utiliser un système de design basé sur des tokens centralisés.
+
+Ne jamais écrire des couleurs en dur dans chaque Composable.
+
+Créer :
+
+```text
+DesignSystem/
+├── AppColorSchemes.kt
+├── AppTypography.kt
+├── AppShapes.kt
+├── AppDimensions.kt
+├── AppTheme.kt
+├── ThemePreferences.kt
+└── ThemeComponents.kt
+```
+
+## 7.1 Les thèmes visuels proposés
+
+Proposer plusieurs styles de présentation.
+
+### THÈME 1 — CLASSIC PAPER
+
+Style intellectuel, biblique et académique.
+
+- Fond crème.
+- Texte brun foncé.
+- Accent doré doux.
+- Cartes sobres.
+- Typographie élégante.
+
+Idéal pour la lecture et la méditation.
+
+### THÈME 2 — MIDNIGHT STUDY
+
+Style moderne et premium.
+
+- Fond bleu nuit.
+- Cartes bleu profond.
+- Texte clair.
+- Accent or doux.
+- Contraste maîtrisé.
+
+Idéal pour l'étude nocturne.
+
+### THÈME 3 — SAGE NATURE
+
+Style calme et naturel.
+
+- Vert sauge.
+- Crème.
+- Vert profond.
+- Couleurs organiques.
+- Ombres légères.
+
+### THÈME 4 — WARM SAND
+
+Style chaleureux.
+
+- Beige sable.
+- Brun.
+- Blanc cassé.
+- Accent terracotta doux.
+
+### THÈME 5 — MINIMAL CLOUD
+
+Style minimaliste.
+
+- Blanc.
+- Gris très léger.
+- Typographie claire.
+- Cartes minimalistes.
+- Peu d'ombres.
+
+### THÈME 6 — HIGH CONTRAST
+
+Style accessible.
+
+- Contrastes élevés.
+- Couleurs très lisibles.
+- Boutons clairement identifiés.
+- Texte facilement distinguable.
+
+## 7.2 Modes d'affichage
+
+Proposer :
+
+- Clair.
+- Sombre.
+- Automatique selon Android.
+- Adaptation à la palette système lorsque disponible.
+
+Ne pas supposer que les couleurs dynamiques Android sont disponibles sur toutes les versions.
+
+## 7.3 Personnalisation de l'utilisateur
+
+Dans les paramètres, l'utilisateur peut :
+
+- Choisir son thème.
+- Choisir son accent color.
+- Choisir le mode clair ou sombre.
+- Modifier la taille du texte.
+- Choisir une police parmi les styles disponibles.
+- Modifier l'espacement des lignes.
+- Choisir la densité des cartes.
+- Activer ou désactiver les animations.
+- Choisir une apparence de lecture.
+
+Les changements doivent être visibles immédiatement.
+
+Sauvegarder les préférences avec DataStore.
+
+La préférence doit être conservée après fermeture de l'application et synchronisée éventuellement entre les appareils avec l'accord de l'utilisateur.
+
+## 7.4 Sélection initiale du thème
+
+Au premier lancement :
+
+Présenter une page :
+
+« Choisis ton espace d'étude. »
+
+Afficher des aperçus visuels de tous les thèmes.
+
+L'utilisateur peut :
+- Prévisualiser un thème.
+- Le sélectionner.
+- Changer de choix ultérieurement.
+
+Ne jamais imposer définitivement un style visuel.
+
+## 7.5 Design général
+
+L'application doit avoir une identité visuelle moderne et reconnaissable.
+
+Éviter :
+- Les écrans trop chargés.
+- Les dégradés excessifs.
+- Les couleurs agressives.
+- Les animations inutiles.
+- Les composants répétitifs.
+- Les polices minuscules.
+- Les interfaces qui ressemblent à de simples formulaires administratifs.
+
+Utiliser :
+- Des cartes élégantes.
+- Des illustrations sobres.
+- Des icônes cohérentes.
+- Des espaces respirants.
+- Des transitions douces.
+- Une bonne hiérarchie typographique.
+
+Respecter les recommandations d'accessibilité Android : tailles de zones tactiles, contraste, lecture d'écran et agrandissement du texte.
+
+---
+
+# 8. BASE DE DONNÉES LOCALE ROOM
+
+Room constitue la source principale des données de l'application.
+
+Toutes les lectures de données doivent fonctionner localement.
+
+Créer les entités suivantes.
+
+### StudyEntity
+
+```text
+studyId
+schemaVersion
+contentVersion
+locale
+title
+categoryId
+description
+difficulty
+estimatedMinutes
+jsonContent
+checksum
+editorialStatus
+downloadedAt
+lastUpdatedAt
+isAvailable
+```
+
+### DialogueProgressEntity
+
+```text
+id
+studyId
+currentNodeId
+historyJson
+answersJson
+isCompleted
+startedAt
+lastOpenedAt
+completedAt
+updatedAt
+```
+
+### UserNoteEntity
+
+```text
+id
+studyId
+nodeId
+content
+createdAt
+updatedAt
+```
+
+### FavoriteEntity
+
+```text
+id
+studyId
+createdAt
+```
+
+### CategoryEntity
+
+```text
+categoryId
+title
+description
+sortOrder
+icon
+```
+
+### SyncQueueEntity
+
+```text
+operationId
+operationType
+entityId
+payload
+createdAt
+retryCount
+status
+```
+
+### ReadingHistoryEntity
+
+```text
+id
+studyId
+nodeId
+visitedAt
+```
+
+Utiliser des relations lorsque nécessaire, sans surcharger les requêtes.
+
+Prévoir :
+- DAO séparés.
+- Transactions Room.
+- Index appropriés.
+- Migrations explicites.
+- Tests de migration.
+- Flow pour les observations.
+- Suppression sécurisée des données.
+
+---
+
+# 9. ARCHITECTURE OFFLINE-FIRST
+
+C'est l'une des contraintes les plus importantes.
+
+L'application doit être utilisable dès son installation sans connexion Internet.
+
+Principe :
+
+**Room = Source of Truth.**
+
+**Appwrite = Synchronisation et distribution.**
+
+Le fonctionnement doit respecter le flux suivant :
+
+```text
+              APPLICATION ANDROID
+                       |
+                       |
+                PRESENTATION
+                       |
+                    DOMAIN
+                       |
+                  REPOSITORY
+                       |
+              -----------------
+              |               |
+             ROOM          APPWRITE
+              |               |
+       DONNÉES LOCALES    CLOUD DISTANT
+              |
+          UI ACTUALISÉE
+```
+
+## 9.1 Lecture
+
+Lorsqu'un écran demande des études :
+
+1. Lire Room.
+2. Afficher immédiatement les données locales.
+3. Vérifier éventuellement la disponibilité du réseau.
+4. Lancer une synchronisation en arrière-plan.
+5. Mettre à jour Room après validation.
+6. L'interface observe automatiquement les changements.
+
+L'interface ne doit jamais attendre Appwrite pour afficher une étude déjà installée.
+
+## 9.2 Écriture
+
+Lorsqu'un utilisateur répond à une question :
+
+1. Enregistrer immédiatement la réponse dans Room.
+2. Mettre à jour l'interface.
+3. Ajouter une opération à la file de synchronisation si nécessaire.
+4. Synchroniser lorsque le réseau sera disponible.
+
+Le fonctionnement pédagogique ne doit jamais dépendre d'une requête distante.
+
+## 9.3 Synchronisation
+
+Utiliser WorkManager.
+
+Les tâches doivent être :
+- Réessai automatique.
+- Idempotentes.
+- Protégées contre les duplications.
+- Compatibles avec les interruptions réseau.
+- Respectueuses de la batterie.
+- Limitées lorsque les données mobiles sont coûteuses.
+
+Proposer un mode :
+- Synchronisation automatique.
+- Synchronisation uniquement en Wi-Fi.
+- Synchronisation manuelle.
+
+## 9.4 Protection des données locales
+
+Ne jamais supprimer une étude locale simplement parce qu'elle n'est plus présente temporairement dans le catalogue distant.
+
+Une suppression distante doit avoir une règle de dépréciation explicite.
+
+Les progressions doivent être conservées même lorsqu'une étude reçoit une nouvelle version.
+
+---
+
+# 10. INTÉGRATION APPWRITE CLOUD 2.X
+
+Utiliser le SDK Android officiel d'Appwrite.
+
+Ne jamais utiliser par erreur le SDK Kotlin Server destiné aux applications backend.
+
+Créer les fichiers :
+
+```text
+core/appwrite/
+├── AppwriteClientProvider.kt
+├── AppwriteAccountDataSource.kt
+├── AppwriteStudyDataSource.kt
+├── AppwriteProgressDataSource.kt
+├── AppwriteStorageDataSource.kt
+├── AppwriteErrorMapper.kt
+└── AppwriteRepository.kt
+```
+
+Les identifiants de configuration doivent provenir des propriétés locales de construction ou de BuildConfig.
+
+Exemple :
+
+```properties
+APPWRITE_ENDPOINT=https://REGION.cloud.appwrite.io/v1
+APPWRITE_PROJECT_ID=YOUR_PROJECT_ID
+APPWRITE_DATABASE_ID=sola_scriptura
+APPWRITE_CATALOG_TABLE_ID=study_catalog
+APPWRITE_PROGRESS_TABLE_ID=user_progress
+APPWRITE_STUDY_BUCKET_ID=study_content
+```
+
+Ne jamais utiliser de clé API serveur dans Android.
+
+Le Project ID et l'endpoint sont des paramètres clients, pas des secrets.
+
+## 10.1 Authentification facultative
+
+L'application doit être utilisable sans inscription.
+
+Mode local :
+- L'utilisateur ouvre l'application.
+- Il choisit son thème.
+- Il commence immédiatement ses études.
+- La progression reste dans Room.
+
+Mode connecté :
+- Création d'un compte.
+- Connexion email/mot de passe.
+- Récupération du compte.
+- Synchronisation du progrès.
+- Restauration sur un autre appareil.
+- Déconnexion.
+
+La connexion ne doit jamais être obligatoire pour accéder aux études déjà disponibles.
+
+Lorsqu'un utilisateur crée un compte après avoir utilisé l'application hors ligne, proposer de transférer sa progression locale.
+
+Éviter les pertes de données pendant cette opération.
+
+## 10.2 Organisation Appwrite
+
+Créer les ressources suivantes.
+
+### Database
+
+`sola_scriptura`
+
+### Table 1 : study_catalog
+
+Champs :
+
+```text
+studyId
+title
+subtitle
+description
+categoryId
+locale
+contentVersion
+schemaVersion
+storageFileId
+checksum
+estimatedMinutes
+difficulty
+tags
+editorialStatus
+published
+sortOrder
+updatedAt
+```
+
+Cette table contient le catalogue des études disponibles.
+
+Elle ne doit pas contenir obligatoirement le contenu complet de chaque dialogue.
+
+### Table 2 : user_progress
+
+Champs :
+
+```text
+userId
+studyId
+currentNodeId
+progressJson
+completed
+startedAt
+completedAt
+updatedAt
+```
+
+Chaque utilisateur ne doit pouvoir accéder qu'à sa propre progression.
+
+Activer la sécurité au niveau des lignes et définir des permissions strictes par utilisateur.
+
+### Storage : study_content
+
+Contient les fichiers JSON.
+
+Organisation :
+
+```text
+study_content/
+├── foundations/
+├── salvation/
+├── forgotten_truths/
+└── prophecies/
+```
+
+Les utilisateurs peuvent lire les contenus publiés.
+
+Les applications clientes ne doivent pas avoir les droits de publication, de modification ou de suppression des études.
+
+La publication se fait uniquement depuis un environnement d'administration autorisé.
+
+### Storage : study_assets
+
+Contient :
+- Couvertures.
+- Illustrations.
+- Petites ressources graphiques.
+- Images complémentaires.
+
+Limiter les tailles et optimiser les images.
+
+## 10.3 Publication de nouvelles études
+
+Le fonctionnement souhaité :
+
+```text
+Préparation externe du contenu
+          |
+          v
+Vérification du JSON
+          |
+          v
+Validation éditoriale
+          |
+          v
+Publication sur Appwrite
+          |
+          v
+Mise à jour du catalogue
+          |
+          v
+Détection Android
+          |
+          v
+Téléchargement du JSON
+          |
+          v
+Validation Android
+          |
+          v
+Enregistrement dans Room
+          |
+          v
+Étude disponible hors ligne
+```
+
+Ajouter un mécanisme de versionnement.
+
+Une étude déjà installée doit rester fonctionnelle si une nouvelle version échoue à la validation.
+
+## 10.4 Gestion des erreurs
+
+Prévoir les erreurs suivantes :
+
+- Absence de connexion.
+- Session expirée.
+- Identifiants incorrects.
+- Projet Appwrite non configuré.
+- Ressource distante absente.
+- JSON corrompu.
+- Version de schéma non supportée.
+- Permission refusée.
+- Stockage insuffisant.
+- Temps d'attente dépassé.
+- Erreur serveur.
+
+Les messages doivent être compréhensibles.
+
+Ne jamais afficher les détails techniques sensibles à l'utilisateur.
+
+---
+
+# 11. SYNCHRONISATION DES PROGRESSIONS
+
+Mettre en œuvre une politique de fusion déterministe.
+
+En cas de progression disponible sur deux appareils :
+
+1. Ne jamais supprimer une étude terminée.
+2. Conserver les étapes valides déjà visitées.
+3. Fusionner les clés doctrinales débloquées.
+4. Fusionner les notes selon leur identifiant.
+5. Conserver le parcours actif le plus récent pour la reprise.
+6. Préserver les réponses distinctes lorsqu'elles ne se contredisent pas.
+7. Utiliser des horodatages cohérents et des identifiants d'opérations uniques.
+
+Documenter la stratégie de résolution des conflits.
+
+Ne jamais supposer que les horloges de deux appareils sont parfaitement synchronisées.
+
+Si une fusion ne peut pas être effectuée sans risque de perte, préserver les deux versions et demander une décision à l'utilisateur.
+
+---
+
+# 12. PARAMÈTRES UTILISATEUR
+
+Créer un écran Settings complet.
+
+Sections :
+
+### Apparence
+- Thème.
+- Couleur d'accent.
+- Mode clair/sombre.
+- Typographie.
+- Taille du texte.
+- Espacement.
+- Animations.
+
+### Préférences d'étude
+- Langue.
+- Durée préférée des études.
+- Reprise automatique.
+- Notifications quotidiennes.
+- Affichage des références bibliques.
+- Affichage du contexte biblique.
+
+### Compte
+- Connexion.
+- Inscription.
+- Synchronisation.
+- Dernière synchronisation.
+- Déconnexion.
+- Suppression du compte selon les procédures prises en charge.
+
+### Stockage
+- Études installées.
+- Taille utilisée.
+- Gestion des téléchargements.
+- Vider le cache.
+- Conserver les progressions.
+
+### Confidentialité
+- Données synchronisées.
+- Export des notes.
+- Suppression des données.
+- Préférences de synchronisation.
+
+Ne jamais effacer les progressions simplement en vidant le cache.
+
+---
+
+# 13. INTERNATIONALISATION
+
+Préparer le système pour trois langues :
+
+1. Français.
+2. Malagasy.
+3. English.
+
+Les traductions de l'interface ne doivent pas être mélangées avec les textes des études.
+
+Utiliser les ressources Android pour les chaînes de l'interface.
+
+Utiliser `locale` dans les JSON pour les contenus.
+
+Prévoir :
+- Changement de langue sans réinstallation.
+- Recherche adaptée à la langue.
+- Fallback lorsque la traduction d'une étude manque.
+- Conservation de la progression par `studyId` commun.
+- Pas de texte important codé en dur dans les Composables.
+
+Ne pas traduire automatiquement les doctrines ou références sans validation humaine.
+
+---
+
+# 14. QUALITÉ PÉDAGOGIQUE ET ÉDITORIALE
+
+L'application doit adopter une approche respectueuse et rigoureuse.
+
+Pour chaque étude :
+
+- Identifier clairement la question centrale.
+- Présenter les passages dans leur contexte.
+- Expliquer les termes difficiles.
+- Éviter les raisonnements artificiellement simplifiés.
+- Distinguer les faits textuels des interprétations.
+- Éviter les citations inventées.
+- Identifier les éventuels débats d'interprétation.
+- Présenter honnêtement les objections.
+- Prévoir plusieurs chemins de réflexion.
+
+Une réponse incorrecte ne doit pas être punie par une interface humiliante.
+
+L'utilisateur doit pouvoir conserver un désaccord.
+
+Ne jamais utiliser de formulations manipulatrices du type :
+
+« Si tu refuses cette réponse, tu refuses la vérité. »
+
+Préférer :
+
+« Voici les passages examinés. Quelle conclusion te paraît la mieux soutenue par leur contexte ? »
+
+---
+
+# 15. PERFORMANCES ET OPTIMISATION
+
+L'application doit fonctionner correctement sur les appareils modestes.
+
+Exigences :
+
+- Pas de dépendance inutile.
+- Pas de gros chargements sur le thread principal.
+- Lazy loading pour les bibliothèques longues.
+- Pagination pour les grandes listes.
+- Utilisation de Flow.
+- Utilisation de Dispatchers appropriés.
+- Images compressées.
+- Animations légères.
+- Requêtes Room indexées.
+- Prévention des fuites mémoire.
+- Pas de synchronisation permanente.
+- Gestion correcte de l'état de l'application.
+
+Prévoir les situations :
+- Démarrage sans réseau.
+- Fermeture pendant un dialogue.
+- Redémarrage du téléphone.
+- Manque de stockage.
+- Téléchargement interrompu.
+- Mise à jour d'une étude pendant son utilisation.
+
+La reprise d'une étude doit être fiable.
+
+---
+
+# 16. SÉCURITÉ
+
+Mettre en place les bonnes pratiques Android et Appwrite.
+
+- Pas de secrets administrateur dans le code client.
+- Sessions gérées correctement.
+- Permissions Appwrite minimales.
+- Validation de toutes les données distantes.
+- Validation des fichiers téléchargés.
+- Pas d'exécution de code provenant d'un JSON.
+- Limitation de la taille des contenus.
+- Contrôle des noms de fichiers.
+- Pas de chemins de stockage arbitraires.
+- Suppression sécurisée des sessions.
+- Protection des données privées.
+- Journaux sans informations personnelles inutiles.
+
+Les JSON sont exclusivement des données, jamais du code exécutable ou des scripts.
+
+---
+
+# 17. TESTS AUTOMATISÉS
+
+Les tests sont obligatoires.
+
+Ne pas se contenter d'une interface visuellement réussie.
+
+### Tests unitaires
+
+Tester :
+
+- DialogueEngine.
+- Navigation entre les nœuds.
+- Calcul de progression.
+- Restauration d'une session.
+- Validation des graphes.
+- Parsing JSON.
+- Comparaison de versions.
+- Fusion des progressions.
+- Gestion des erreurs.
+- Algorithme du défi quotidien.
+
+### Tests Room
+
+Tester :
+
+- Création des entités.
+- Enregistrement.
+- Lecture.
+- Modification.
+- Suppression.
+- Transactions.
+- Migrations.
+- Conservation des données après redémarrage.
+
+### Tests Appwrite
+
+Tester lorsque le backend est configuré :
+
+- Connexion.
+- Déconnexion.
+- Chargement du catalogue.
+- Téléchargement d'une étude.
+- Upload d'une progression.
+- Restauration d'une progression.
+- Reprise après erreur réseau.
+- Permissions utilisateur.
+
+### Tests UI
+
+Tester :
+
+- Navigation.
+- Sélection du thème.
+- Dialogue.
+- Sélection de réponse.
+- Reprise d'étude.
+- Carnet.
+- Paramètres.
+- Mode sombre.
+- Accessibilité.
+
+### Scénarios Offline
+
+Vérifier systématiquement :
+
+1. Installer l'application.
+2. Couper Internet.
+3. Ouvrir une étude intégrée.
+4. Répondre aux questions.
+5. Fermer l'application.
+6. La relancer.
+7. Vérifier que le progrès existe.
+8. Réactiver Internet.
+9. Synchroniser.
+10. Vérifier que les données sont toujours cohérentes.
+
+---
+
+# 18. DOCUMENTATION OBLIGATOIRE
+
+Créer et maintenir les documents suivants.
+
+### README.md
+
+Doit expliquer :
+- Présentation.
+- Prérequis.
+- Installation.
+- Configuration.
+- Compilation.
+- Lancement.
+- Tests.
+
+### ARCHITECTURE.md
+
+Doit décrire :
+- Les couches.
+- Les responsabilités.
+- Les dépendances entre packages.
+- Les flux de données.
+- Les conventions de développement.
+
+### JSON_SCHEMA.md
+
+Doit expliquer :
+- Tous les champs.
+- Les nœuds.
+- Les phases.
+- Les transitions.
+- Les conclusions.
+- Les références bibliques.
+- Les règles de validation.
+- La gestion des versions.
+
+### CONTENT_AUTHORING.md
+
+Doit expliquer comment préparer une étude sans modifier Kotlin.
+
+Ajouter un tutoriel complet :
+
+1. Choisir le thème.
+2. Construire le parcours.
+3. Préparer les questions.
+4. Ajouter les références bibliques.
+5. Créer les branches.
+6. Créer les synthèses.
+7. Valider le JSON.
+8. Tester le parcours.
+9. Publier.
+
+### APPWRITE_SETUP.md
+
+Décrire précisément :
+- Création du projet.
+- Ajout de la plateforme Android.
+- Création des tables.
+- Création du bucket.
+- Permissions.
+- Configuration des identifiants.
+- Authentification.
+- Synchronisation.
+- Débogage.
+
+### SYNC_RULES.md
+
+Décrire :
+- Stratégie Offline-First.
+- File d'attente.
+- Gestion des erreurs.
+- Réessais.
+- Fusion.
+- Versionnement.
+- Protection contre les pertes.
+
+### CHANGELOG.md
+
+Conserver les changements techniques et les versions.
+
+---
+
+# 19. STRATÉGIE DE DÉVELOPPEMENT EN PHASES
+
+Ne développe pas toute l'application en une seule opération.
+
+Travaille par étapes indépendantes.
+
+Chaque phase doit être compilable et testée avant de passer à la suivante.
+
+## PHASE 1 — FONDATIONS
+
+Objectifs :
+
+- Vérifier l'environnement.
+- Créer le projet Kotlin.
+- Configurer Gradle.
+- Installer Jetpack Compose.
+- Configurer Material 3.
+- Configurer Room.
+- Configurer DataStore.
+- Configurer Hilt.
+- Préparer l'architecture.
+- Vérifier la compilation.
+
+Livrables :
+- Structure de fichiers.
+- Dépendances.
+- Application de démarrage.
+- Documentation initiale.
+
+Critère de validation :
+L'application compile et se lance.
+
+## PHASE 2 — DESIGN SYSTEM
+
+Objectifs :
+
+- Créer les cinq à six thèmes.
+- Créer les couleurs.
+- Créer les typographies.
+- Créer les composants communs.
+- Créer les aperçus.
+- Créer les préférences de thème.
+- Sauvegarder les choix dans DataStore.
+
+Critère de validation :
+Tous les thèmes fonctionnent et peuvent être changés sans redémarrage.
+
+## PHASE 3 — ROOM ET DONNÉES JSON
+
+Objectifs :
+
+- Créer les entités.
+- Créer les DAO.
+- Créer la base de données.
+- Créer les modèles Kotlinx Serialization.
+- Créer le validateur JSON.
+- Importer les études des assets.
+- Créer les repositories locaux.
+- Créer les migrations.
+
+Critère de validation :
+Les études peuvent être importées, lues et conservées hors ligne.
+
+## PHASE 4 — MOTEUR SOCRATIQUE
+
+Objectifs :
+
+- Construire DialogueEngine.
+- Implémenter le graphe orienté.
+- Implémenter les transitions.
+- Gérer l'historique.
+- Gérer les branches.
+- Gérer le retour en arrière.
+- Gérer les synthèses.
+- Gérer les sauvegardes et restaurations.
+
+Critère de validation :
+Un dialogue complet fonctionne avec plusieurs parcours et sans connexion.
+
+## PHASE 5 — INTERFACES UTILISATEUR
+
+Développer :
+- Onboarding.
+- Accueil.
+- Bibliothèque.
+- Catégories.
+- Détails des études.
+- Dialogue.
+- Duel de versets.
+- Enquêtes.
+- Arbre de vérité.
+- Progression.
+- Carnet.
+- Défi quotidien.
+- Paramètres.
+
+Critère de validation :
+Toutes les fonctionnalités locales essentielles sont opérationnelles.
+
+## PHASE 6 — APPWRITE
+
+Objectifs :
+
+- Configurer le client.
+- Implémenter Account.
+- Implémenter TablesDB.
+- Implémenter Storage.
+- Créer les DataSources distantes.
+- Configurer les permissions.
+- Télécharger le catalogue.
+- Télécharger les JSON.
+- Envoyer les progressions.
+- Restaurer les comptes.
+
+Critère de validation :
+Les utilisateurs peuvent synchroniser leur progression sans rendre le réseau obligatoire.
+
+## PHASE 7 — WORKMANAGER ET OFFLINE-FIRST
+
+Objectifs :
+
+- File d'attente locale.
+- Worker de synchronisation.
+- Réessais.
+- Détection de réseau.
+- Importation atomique.
+- Résolution des conflits.
+- Protection des données locales.
+
+Critère de validation :
+L'application résiste aux interruptions Internet.
+
+## PHASE 8 — OPTIMISATION ET QUALITÉ
+
+Objectifs :
+
+- Corriger les bugs.
+- Exécuter les tests.
+- Optimiser Room.
+- Contrôler les performances.
+- Vérifier toutes les tailles d'écran.
+- Vérifier les thèmes.
+- Vérifier l'accessibilité.
+- Vérifier la consommation de mémoire.
+
+Critère de validation :
+Compilation Release réussie, tests essentiels réussis et parcours utilisateur fonctionnels.
+
+## PHASE 9 — PRÉPARATION DE LA DISTRIBUTION
+
+Créer :
+
+- APK de test.
+- AAB de production.
+- Configuration Release.
+- Politique de confidentialité.
+- Documentation utilisateur.
+- Checklist de publication.
+
+Vérifier les exigences de distribution Android actuelles avant publication.
+
+---
+
+# 20. PRINCIPES DE TRAVAIL DU VIBE CODING AGENT
+
+Tu dois respecter les règles suivantes tout au long du projet.
+
+1. Avant de créer un fichier, examiner la structure existante.
+2. Ne jamais écraser un code fonctionnel sans comprendre son rôle.
+3. Ne jamais créer deux implémentations concurrentes de la même responsabilité.
+4. Ne jamais simuler une fonctionnalité qui n'est pas réellement implémentée.
+5. Toujours utiliser les APIs réellement disponibles dans les versions retenues.
+6. Vérifier les signatures du SDK Appwrite avant d'écrire les appels.
+7. Ne jamais inventer des méthodes Appwrite.
+8. Après chaque phase, compiler.
+9. Après chaque phase, exécuter les tests correspondants.
+10. Corriger les erreurs avant de poursuivre.
+11. Documenter les choix techniques importants.
+12. Ne pas générer des centaines de lignes inutiles.
+13. Préférer des composants réutilisables.
+14. Éviter les dépendances circulaires.
+15. Conserver une application fonctionnelle pendant le développement.
+
+Ne pas déclarer une fonctionnalité terminée sans vérifier son fonctionnement.
+
+Ne pas laisser :
+- TODO.
+- Méthodes vides.
+- Données fictives en production.
+- Boutons sans action.
+- Écrans sans navigation.
+- Exceptions silencieuses.
+- Erreurs de compilation non résolues.
+
+Si une fonctionnalité dépend d'une configuration Appwrite non encore renseignée, expliquer précisément cette configuration et prévoir un état d'application propre tant qu'elle manque.
+
+---
+
+# 21. LIVRABLE FINAL ATTENDU
+
+Je veux une véritable application Android fonctionnelle, et non une simple maquette.
+
+Livrer :
+
+1. Le code source complet.
+2. La configuration Gradle.
+3. La configuration Jetpack Compose.
+4. Tous les thèmes.
+5. Les préférences utilisateur.
+6. La base Room.
+7. Le moteur socratique.
+8. Le système JSON.
+9. Le validateur.
+10. Les repositories.
+11. Le système Offline-First.
+12. La configuration Appwrite.
+13. Le système de synchronisation.
+14. Tous les écrans.
+15. Les tests automatisés.
+16. Les fichiers JSON de démonstration.
+17. Les documentations.
+18. Les instructions de compilation.
+
+L'application doit être fonctionnelle même si Appwrite Cloud n'est pas encore configuré, à condition que les études initiales soient intégrées dans les assets.
+
+Créer des études de démonstration identifiées comme telles et les faire passer par le même moteur que les futures études.
+
+Ne jamais présenter un contenu théologique non vérifié comme une étude officiellement validée.
+
+---
+
+# 22. OBJECTIF FINAL ET VISION À LONG TERME
+
+Le résultat doit être un moteur d'étude biblique capable d'accueillir des centaines ou milliers d'études sans réécriture du code Kotlin.
+
+La maintenance future doit essentiellement consister à :
+
+- Ajouter un JSON.
+- Vérifier son contenu.
+- Valider ses références bibliques.
+- Importer ou publier le fichier sur Appwrite.
+- Laisser l'application synchroniser la nouvelle étude.
+
+Il doit également être possible d'ajouter ultérieurement :
+
+- De nouveaux parcours.
+- De nouveaux styles visuels.
+- De nouvelles traductions.
+- De nouvelles catégories.
+- De nouvelles formes de questions.
+- De nouvelles méthodes pédagogiques.
+- De nouvelles ressources bibliques.
+
+Tout cela sans casser les anciennes études.
+
+**RÈGLE FINALE : construire d'abord un moteur solide, générique, testable et maintenable. Les contenus bibliques doivent être des données indépendantes, jamais des fonctionnalités codées en dur.**
+
+Commence par analyser l'environnement et produire un plan d'implémentation détaillé de la PHASE 1. Ensuite, développe réellement chaque phase, compile et teste le projet avant de poursuivre.
+
+Ne te contente jamais de décrire ce qu'il faudrait coder : implémente les fonctionnalités dans le projet existant et vérifie leur fonctionnement.

@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "studyId": "etat_des_morts_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Que se passe-t-il après la mort ?",
+  "subtitle": "Une enquête biblique progressive sur la mort et la résurrection",
+  "description": "Examine plusieurs textes bibliques (Ancien et Nouveau Testament) sur la nature de l'âme, le sommeil de la mort et l'espérance de la résurrection.",
+  "categoryId": "forgotten_truths",
+  "tags": ["mort", "resurrection", "esperance", "ame"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 12,
+  "editorialStatus": "REVIEWED",
+  "startNodeId": "em_node_001",
+  "prerequisiteStudyIds": ["creation_001", "jesus_christ_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "reviewer": "Comité éditorial Sola Scriptura",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01",
+    "license": "CC-BY-SA-4.0",
+    "bibliography": ["Genèse 2:7", "Ecclésiaste 9:5-6", "Jean 11:11-14", "Actes 2:29-34", "1 Thessaloniciens 4:13-17"]
+  },
+  "nodes": [
+    {
+      "id": "em_node_001",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Selon ta compréhension actuelle, que se passe-t-il immédiatement après la mort d'une personne ?",
+      "contextText": "Aucune réponse n'est jugée ici. Nous partons simplement de ce que tu penses aujourd'hui pour le confronter avec loyauté aux textes bibliques.",
+      "instructionalText": "Choisis la perspective la plus proche de la tienne.",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "em_c1",
+          "label": "L'âme quitte le corps et continue immédiatement à vivre consciemment.",
+          "feedback": "C'est une idée très répandue. Examinons ensemble comment les auteurs bibliques en parlent.",
+          "nextNodeId": "em_node_002",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "em_c2",
+          "label": "La personne repose inconsciente en attendant la résurrection.",
+          "feedback": "Vérifions si les textes appuient cette compréhension et comment répondre aux passages difficiles.",
+          "nextNodeId": "em_node_003",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "em_c3",
+          "label": "Je ne connais pas la réponse",
+          "feedback": "C'est un excellent point de départ : laissons d'abord parler les textes.",
+          "nextNodeId": "em_node_002",
+          "kind": "DONT_KNOW"
+        }
+      ]
+    },
+    {
+      "id": "em_node_002",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Examinons ce que l'apôtre Pierre affirme le jour de la Pentecôte au sujet du roi David, pourtant homme de foi. Comment comprends-tu ce passage ?",
+      "contextText": "En Actes 2:29-34, Pierre prêche à Jérusalem après l'ascension de Jésus. Pour démontrer que le Psaume 16 parlait du Messie et non de David lui-même, Pierre fait une remarque précise sur l'état de David.",
+      "proposedInterpretation": "Selon la lecture adventiste (mortalité conditionnelle), ni David ni les justes ne sont montés au ciel avant la résurrection promise par le Christ.",
+      "verseReferences": [
+        {
+          "bookId": "ACT",
+          "bookName": "Actes",
+          "chapter": 2,
+          "startVerse": 29,
+          "endVerse": 34,
+          "translationId": "LSG",
+          "quotedText": "Hommes frères, qu'il me soit permis de vous dire librement, au sujet du patriarche David, qu'il est mort, qu'il a été enseveli, et que son sépulcre existe encore aujourd'hui parmi nous… Car David n'est point monté au ciel…",
+          "licenseId": "PUBLIC_DOMAIN",
+          "contextSummary": "Discours de Pierre à la Pentecôte comparant David et Jésus."
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c4",
+          "label": "Pierre dit clairement que David n'est pas encore monté au ciel.",
+          "feedback": "C'est une observation textuelle directe : l'argument de Pierre repose justement sur le fait que le tombeau de David est toujours là.",
+          "nextNodeId": "em_node_003",
+          "kind": "STANDARD",
+          "unlockedNotion": "Actes 2:34 — David n'est pas monté au ciel"
+        },
+        {
+          "id": "em_c5",
+          "label": "Je veux examiner le contexte",
+          "feedback": "Dans les versets 25-32, Pierre cite le Psaume 16 (« Tu n'abandonneras pas mon âme dans le séjour des morts ») pour montrer qu'il ne s'est pas encore accompli pour David, mais pour Jésus ressuscité.",
+          "nextNodeId": null,
+          "kind": "EXAMINE_CONTEXT"
+        },
+        {
+          "id": "em_c6",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "C'est légitime : peut-être penses-tu à d'autres passages comme le brigand sur la croix ou Paul en Philippiens 1:23. Examinons d'abord l'Ancien Testament puis l'enseignement de Jésus.",
+          "nextNodeId": "em_node_003",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "em_node_003",
+      "phase": "MAIEUTICS",
+      "type": "COMPARISON",
+      "speakerText": "Dans Genèse 2:7, comment l'être humain devient-il une « âme vivante » ? Et que décrit Jésus en Jean 11:11-14 lorsque Lazare meurt ?",
+      "contextText": "En hébreu (néphesh), « âme vivante » désigne l'être entier formé de poussière et du souffle de vie, non une entité séparée préexistante.",
+      "proposedInterpretation": "La perspective adventiste conçoit l'être humain comme une unité indivisible (corps + souffle = être vivant) ; à la mort, le souffle retourne à Dieu et la conscience cesse jusqu'au réveil.",
+      "verseReferences": [
+        {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 2,
+          "startVerse": 7,
+          "endVerse": 7,
+          "translationId": "LSG",
+          "quotedText": "L'Éternel Dieu forma l'homme de la poussière de la terre, il souffla dans ses narines un souffle de vie et l'homme devint un être vivant [une âme vivante].",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "JHN",
+          "bookName": "Jean",
+          "chapter": 11,
+          "startVerse": 11,
+          "endVerse": 14,
+          "translationId": "LSG",
+          "quotedText": "…Lazare, notre ami, dort ; mais je vais le réveiller. Les disciples lui dirent : Seigneur, s'il dort, il sera guéri. Jésus avait parlé de sa mort… Alors Jésus leur dit ouvertement : Lazare est mort.",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "ECC",
+          "bookName": "Ecclésiaste",
+          "chapter": 9,
+          "startVerse": 5,
+          "endVerse": 6,
+          "translationId": "LSG",
+          "quotedText": "Les vivants, en effet, savent qu'ils mourront ; mais les morts ne savent rien… et leur amour, et leur haine, et leur envie, ont déjà péri…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c7",
+          "label": "Jésus appelle la mort un sommeil dont il faut être réveillé.",
+          "feedback": "Oui : si Lazare avait déjà été dans la gloire céleste depuis 4 jours, le rappeler sur terre dans un corps mortel aurait été curieux.",
+          "nextNodeId": "em_node_004",
+          "kind": "STANDARD",
+          "unlockedNotion": "La mort comparée à un sommeil (Jean 11)"
+        },
+        {
+          "id": "em_c8",
+          "label": "L'Ecclésiaste décrit peut-être seulement ce qui est visible « sous le soleil ».",
+          "feedback": "Bonne remarque littéraire ! C'est pourquoi il est utile de comparer avec l'espérance explicite de Paul en 1 Thessaloniciens 4.",
+          "nextNodeId": "em_node_004",
+          "kind": "NOT_CONVINCED"
+        },
+        {
+          "id": "em_c9",
+          "label": "Revenir à la question précédente",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "em_node_004",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Pour consoler les chrétiens en deuil, vers quel événement Paul dirige-t-il leur espérance en 1 Thessaloniciens 4:13-17 ?",
+      "contextText": "Les croyants de Thessalonique s'inquiétaient pour leurs proches décédés avant le retour du Christ.",
+      "proposedInterpretation": "L'espérance chrétienne apostolique est centrée sur la résurrection au retour du Christ, où tous les croyants entrent ensemble dans la vie éternelle.",
+      "verseReferences": [
+        {
+          "bookId": "1TH",
+          "bookName": "1 Thessaloniciens",
+          "chapter": 4,
+          "startVerse": 13,
+          "endVerse": 17,
+          "translationId": "LSG",
+          "quotedText": "Nous ne voulons pas, frères, que vous soyez dans l'ignorance au sujet de ceux qui dorment, afin que vous ne vous affligiez pas comme les autres qui n'ont point d'espérance… Car le Seigneur lui-même, à un signal donné… descendra du ciel, et les morts en Christ ressusciteront premièrement. Ensuite, nous les vivants, qui seront restés, nous serons tous ensemble enlevés avec eux…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c10",
+          "label": "Il place la consolation et les retrouvailles au retour de Jésus.",
+          "feedback": "Notice comment Paul dit « tous ensemble » : les vivants ne devancent pas ceux qui dorment.",
+          "nextNodeId": "em_node_005",
+          "kind": "STANDARD",
+          "unlockedNotion": "Espérance de la résurrection (1 Thess. 4)"
+        },
+        {
+          "id": "em_c11",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Tu peux noter dans la synthèse les passages qui te semblent encore en tension (comme Luc 23:43 ou 2 Corinthiens 5:8) pour les approfondir.",
+          "nextNodeId": "em_node_005",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "em_node_005",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Voici les passages examinés. Quelle conclusion te paraît la mieux soutenue par leur contexte ?",
+      "contextText": "Cette synthèse reflète la compréhension adventiste tout en respectant pleinement ton discernement personnel.",
+      "proposedInterpretation": "Position adventiste : la Bible enseigne que la mort est un sommeil inconscient et que l'immortalité est un don reçu lors de la résurrection au retour du Christ.",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "em_conclusion_001",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "em_conclusion_001",
+      "title": "Synthèse — Sommeil de la mort et espérance de la résurrection",
+      "summary": "Dans l'ensemble des textes parcourus, l'être humain est une unité vivante dépendante du souffle de Dieu, la mort est décrite comme un repos inconscient, et la vie future est liée à la résurrection promise par le Christ.",
+      "reasoningSteps": [
+        "Genèse 2:7 définit l'homme comme la réunion du corps et du souffle de vie.",
+        "Actes 2:34 montre que David n'était pas monté au ciel après sa mort.",
+        "Jean 11:11-14 et 1 Thessaloniciens 4:13-17 désignent la mort des croyants comme un sommeil en vue du réveil final."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "ACT",
+          "bookName": "Actes",
+          "chapter": 2,
+          "startVerse": 34,
+          "endVerse": 34,
+          "translationId": "LSG",
+          "quotedText": "Car David n'est point monté au ciel…"
+        },
+        {
+          "bookId": "1TH",
+          "bookName": "1 Thessaloniciens",
+          "chapter": 4,
+          "startVerse": 16,
+          "endVerse": 17,
+          "translationId": "LSG",
+          "quotedText": "…les morts en Christ ressusciteront premièrement…"
+        }
+      ],
+      "reflectionQuestion": "Quelle relation vois-tu entre la nature de la mort et l'importance de la résurrection dans la foi chrétienne ?",
+      "relatedStudyIds": ["sabbat_001", "sanctuaire_001"]
+    }
+  ],
+  "verseDuels": [
+    {
+      "id": "em_duel_1",
+      "title": "Actes 2:34 face à Luc 23:43",
+      "passageA": {
+        "bookId": "ACT",
+        "bookName": "Actes",
+        "chapter": 2,
+        "startVerse": 34,
+        "endVerse": 34,
+        "translationId": "LSG",
+        "quotedText": "Car David n'est point monté au ciel, mais il dit lui-même : Le Seigneur a dit à mon Seigneur : Assieds-toi à ma droite…"
+      },
+      "contextA": "Pierre affirme devant Jérusalem que le patriarche David n'est pas monté au ciel.",
+      "passageB": {
+        "bookId": "LUK",
+        "bookName": "Luc",
+        "chapter": 23,
+        "startVerse": 43,
+        "endVerse": 43,
+        "translationId": "LSG",
+        "quotedText": "Jésus lui répondit : Je te le dis en vérité, aujourd'hui tu seras avec moi dans le paradis."
+      },
+      "contextB": "Les manuscrits grecs anciens n'avaient pas de virgules : on peut lire « Je te le dis aujourd'hui, tu seras… » ou « …aujourd'hui tu seras… ». En outre, trois jours plus tard (Jean 20:17), Jésus dit à Marie qu'il n'est « pas encore monté vers le Père ».",
+      "analysisQuestion": "En tenant compte de Jean 20:17 et de la ponctuation grecque antique, comment ces deux passages peuvent-ils s'éclairer mutuellement ?",
+      "suggestedSynthesis": "Jésus promet solennellement « aujourd'hui » (au moment même où il semble vaincu sur la croix) une place dans son royaume futur, sans contredire Jean 20:17 ni Actes 2:34."
+    }
+  ],
+  "investigation": {
+    "id": "em_inv_1",
+    "centralQuestion": "Comment la Bible décrit-elle la condition des morts entre le décès et la résurrection ?",
+    "clues": [
+      {
+        "id": "em_clue_1",
+        "testamentSection": "Genèse",
+        "verseReference": {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 2,
+          "startVerse": 7,
+          "endVerse": 7,
+          "translationId": "LSG",
+          "quotedText": "…l'homme devint une âme vivante."
+        },
+        "observationPrompt": "L'homme reçoit-il une âme immortelle séparée, ou devient-il une âme vivante ?",
+        "keyInsight": "L'être humain est une âme vivante issue de l'union du corps et du souffle."
+      },
+      {
+        "id": "em_clue_2",
+        "testamentSection": "Évangiles",
+        "verseReference": {
+          "bookId": "JHN",
+          "bookName": "Jean",
+          "chapter": 11,
+          "startVerse": 11,
+          "endVerse": 14,
+          "translationId": "LSG",
+          "quotedText": "Lazare, notre ami, dort ; mais je vais le réveiller."
+        },
+        "observationPrompt": "Pourquoi Jésus compare-t-il la mort au sommeil ?",
+        "keyInsight": "Parce que le sommeil est inconscient et provisoire en attente du réveil."
+      },
+      {
+        "id": "em_clue_3",
+        "testamentSection": "Actes",
+        "verseReference": {
+          "bookId": "ACT",
+          "bookName": "Actes",
+          "chapter": 2,
+          "startVerse": 34,
+          "endVerse": 34,
+          "translationId": "LSG",
+          "quotedText": "Car David n'est point monté au ciel…"
+        },
+        "observationPrompt": "Où se trouvait David des siècles après sa mort selon Pierre ?",
+        "keyInsight": "Dans l'attente de la résurrection, non déjà au ciel."
+      },
+      {
+        "id": "em_clue_4",
+        "testamentSection": "Épîtres",
+        "verseReference": {
+          "bookId": "1TH",
+          "bookName": "1 Thessaloniciens",
+          "chapter": 4,
+          "startVerse": 16,
+          "endVerse": 16,
+          "translationId": "LSG",
+          "quotedText": "…les morts en Christ ressusciteront premièrement."
+        },
+        "observationPrompt": "Quand la vie éternelle commence-t-elle pour les défunts en Christ ?",
+        "keyInsight": "Lors du retour du Seigneur et de la résurrection."
+      }
+    ],
+    "synthesisPrompt": "Relie ces quatre indices bibliques pour formuler ta propre synthèse sur la mort et la résurrection."
+  }
+}

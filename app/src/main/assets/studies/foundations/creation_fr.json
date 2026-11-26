@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "studyId": "creation_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Pourquoi Dieu a-t-il créé le monde ?",
+  "subtitle": "Relation, bonté et sens de l'existence dans Genèse 1–2",
+  "description": "Découvre ce que le récit de la Création révèle sur l'intention de Dieu et la valeur de l'être humain.",
+  "categoryId": "foundations",
+  "tags": ["creation", "genese", "amour", "sabbat"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 9,
+  "editorialStatus": "DEMO",
+  "startNodeId": "cr_node_1",
+  "prerequisiteStudyIds": ["bible_fiable_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "cr_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Si un ami te demandait pourquoi l'univers et l'humanité existent selon la Bible, que répondrais-tu spontanément ?",
+      "contextText": "Nous allons observer les mots répétés dans Genèse 1 et 2 pour voir ce que le texte met au centre.",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "cr_c1",
+          "label": "Pour que Dieu soit adoré et obéi.",
+          "feedback": "Examinons si Genèse 1 commence par une exigence ou par un don.",
+          "nextNodeId": "cr_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "cr_c2",
+          "label": "Par amour, pour partager la vie et la relation.",
+          "feedback": "Vérifions dans le texte comment cette relation se construit.",
+          "nextNodeId": "cr_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "cr_c3",
+          "label": "Je ne connais pas la réponse",
+          "feedback": "Regardons directement les premiers versets.",
+          "nextNodeId": "cr_node_2",
+          "kind": "DONT_KNOW"
+        }
+      ]
+    },
+    {
+      "id": "cr_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Dans Genèse 1:26-31, quel statut particulier est donné à l'être humain ?",
+      "contextText": "Dans le Proche-Orient ancien, seul le roi était parfois appelé « image de Dieu ». Ici, toute l'humanité (homme et femme) reçoit cette dignité.",
+      "proposedInterpretation": "La perspective adventiste voit dans l'image de Dieu la capacité relationnelle, morale et spirituelle de l'humain.",
+      "verseReferences": [
+        {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 1,
+          "startVerse": 27,
+          "endVerse": 31,
+          "translationId": "LSG",
+          "quotedText": "Dieu créa l'homme à son image, il le créa à l'image de Dieu, il créa l'homme et la femme. Dieu les bénit… Dieu vit tout ce qu'il avait fait et voici, cela était très bon.",
+          "licenseId": "PUBLIC_DOMAIN",
+          "contextSummary": "Couronnement de la semaine de création en Genèse 1."
+        }
+      ],
+      "choices": [
+        {
+          "id": "cr_c4",
+          "label": "Une dignité royale et relationnelle : être à l'image de Dieu.",
+          "feedback": "Oui, et le récit conclut que cela était « très bon » avant toute chute.",
+          "nextNodeId": "cr_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Imago Dei — Dignité humaine"
+        },
+        {
+          "id": "cr_c5",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Prendre le temps de réfléchir au sens d'« image de Dieu » est essentiel. Continuons avec Genèse 2.",
+          "nextNodeId": "cr_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "cr_node_3",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Pourquoi le récit s'achève-t-il par un jour de repos partagé alors que Dieu n'est pas fatigué ?",
+      "contextText": "Genèse 2:1-3 introduit le septième jour comme un moment sanctifié pour la rencontre entre le Créateur et sa création.",
+      "proposedInterpretation": "Le Sabbat hebdomadaire est compris comme le mémorial de cette création achevée et relationnelle.",
+      "verseReferences": [
+        {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 2,
+          "startVerse": 1,
+          "endVerse": 3,
+          "translationId": "LSG",
+          "quotedText": "Ainsi furent achevés les cieux et la terre, et toute leur armée. Dieu acheva au septième jour son œuvre, qu'il avait faite : et il se reposa au septième jour de toute son œuvre, qu'il avait faite. Dieu bénit le septième jour, et il le sanctifia…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "cr_c6",
+          "label": "Pour offrir un temps de communion gratuit avec ses créatures.",
+          "feedback": "Le repos n'est pas dû à la fatigue divine, mais à la joie d'une œuvre achevée et partagée.",
+          "nextNodeId": "cr_node_4",
+          "kind": "STANDARD",
+          "unlockedNotion": "Création et communion du 7e jour"
+        },
+        {
+          "id": "cr_c7",
+          "label": "Revenir à la question précédente",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "cr_node_4",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "À la lumière de Genèse 1 et 2, quelle vision de Dieu ressort de la Création ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "cr_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "cr_conclusion_1",
+      "title": "Synthèse — Un monde voulu bon et relationnel",
+      "summary": "Selon Genèse 1–2, Dieu crée sans contrainte ni conflit cosmique, qualifie son œuvre de très bonne et invite l'humanité à une relation libre.",
+      "reasoningSteps": [
+        "L'être humain porte l'image de Dieu dans la relation et la responsabilité.",
+        "La création s'achève par la bénédiction d'un temps partagé (Genèse 2:3)."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 1,
+          "startVerse": 31,
+          "endVerse": 31,
+          "translationId": "LSG",
+          "quotedText": "Dieu vit tout ce qu'il avait fait et voici, cela était très bon."
+        }
+      ],
+      "reflectionQuestion": "Comment cette vision de l'origine change-t-elle ton regard sur la valeur d'une vie humaine ?",
+      "relatedStudyIds": ["origine_mal_001", "sabbat_001"]
+    }
+  ]
+}

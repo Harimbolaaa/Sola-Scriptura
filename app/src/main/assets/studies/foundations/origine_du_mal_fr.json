@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "studyId": "origine_mal_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "D'où vient le mal ?",
+  "subtitle": "Liberté morale, rébellion et réponse de Dieu",
+  "description": "Examine pourquoi un Dieu bon a permis l'existence de la liberté, et comment la Bible décrit l'entrée du mal.",
+  "categoryId": "foundations",
+  "tags": ["mal", "liberte", "souffrance", "grand_conflit"],
+  "perspective": "SDA",
+  "difficulty": "INTERMEDIATE",
+  "estimatedMinutes": 11,
+  "editorialStatus": "DEMO",
+  "startNodeId": "om_node_1",
+  "prerequisiteStudyIds": ["creation_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "om_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Si Dieu a déclaré sa création « très bonne », comment expliques-tu aujourd'hui la présence du mal et de la souffrance ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "om_c1",
+          "label": "Si Dieu est tout-puissant, il aurait pu empêcher le mal dès le début.",
+          "feedback": "C'est l'une des questions les plus profondes de la philosophie et de la foi. Examinons le lien entre amour et liberté.",
+          "nextNodeId": "om_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "om_c2",
+          "label": "Le mal vient de la liberté mal utilisée par les créatures.",
+          "feedback": "Analysons ce que les textes bibliques disent à propos de cette liberté.",
+          "nextNodeId": "om_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "om_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "L'amour authentique peut-il exister sans liberté de choix ?",
+      "contextText": "En Genèse 2:16-17, Dieu donne tout un jardin mais place une limite symbolique rendant l'obéissance libre et non automatique.",
+      "proposedInterpretation": "Dans la perspective adventiste (thème du grand conflit), Dieu n'a pas créé le mal mais a créé des êtres libres capables d'aimer — et donc capables de refuser.",
+      "verseReferences": [
+        {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 2,
+          "startVerse": 16,
+          "endVerse": 17,
+          "translationId": "LSG",
+          "quotedText": "L'Éternel Dieu donna cet ordre à l'homme : Tu pourras manger de tous les arbres du jardin ; mais tu ne mangeras pas de l'arbre de la connaissance du bien et du mal…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "om_c3",
+          "label": "Sans possibilité de dire non, l'amour ne serait qu'un programme.",
+          "feedback": "C'est un point logique fort : la liberté rend l'amour possible, mais comporte un risque réel.",
+          "nextNodeId": "om_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Amour et liberté morale"
+        },
+        {
+          "id": "om_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "La souffrance des innocents reste difficile à accepter. Voyons comment la Bible décrit l'origine spirituelle de cette rébellion.",
+          "nextNodeId": "om_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "om_node_3",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Que révèle Ézéchiel 28:15 sur l'origine de l'iniquité ?",
+      "contextText": "Dans le langage prophétique adressé au roi de Tyr, beaucoup d'interprètes voient aussi une description symbolique de la chute d'un être céleste parfait à l'origine.",
+      "proposedInterpretation": "Le mal n'a pas été créé par Dieu ; il est apparu inexplicablement dans le cœur d'une créature libre (Lucifer / Satan), puis s'est étendu à l'humanité.",
+      "verseReferences": [
+        {
+          "bookId": "EZK",
+          "bookName": "Ézéchiel",
+          "chapter": 28,
+          "startVerse": 15,
+          "endVerse": 15,
+          "translationId": "LSG",
+          "quotedText": "Tu as été intègre dans tes voies, depuis le jour où tu fus créé jusqu'à celui où l'iniquité a été trouvée chez toi.",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "REV",
+          "bookName": "Apocalypse",
+          "chapter": 12,
+          "startVerse": 7,
+          "endVerse": 9,
+          "translationId": "LSG",
+          "quotedText": "Et il y eut guerre dans le ciel. Michel et ses anges combattirent contre le dragon… Et il fut précipité, le grand dragon, le serpent ancien, appelé le diable et Satan…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "om_c5",
+          "label": "Le mal est un intrus, non une création de Dieu.",
+          "feedback": "Et Dieu choisit de laisser se révéler la vraie nature du mal plutôt que d'imposer la crainte par la force.",
+          "nextNodeId": "om_node_4",
+          "kind": "STANDARD",
+          "unlockedNotion": "Le mal n'a pas de justification rationnelle"
+        },
+        {
+          "id": "om_c6",
+          "label": "Revenir à la question précédente",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "om_node_4",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Quelle compréhension retiens-tu sur la responsabilité de Dieu face au mal ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "om_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "om_conclusion_1",
+      "title": "Synthèse — Liberté et victoire sur le mal",
+      "summary": "La Bible présente le mal non comme l'œuvre de Dieu, mais comme le détournement de la liberté créée. La croix montre que Dieu lui-même entre dans la souffrance pour libérer sans contraindre.",
+      "reasoningSteps": [
+        "La création initiale était bonne et libre.",
+        "L'amour exige le choix réel (Genèse 2:16-17).",
+        "Le conflit cosmique se résout par la vérité et le don de soi, non par la tyrannie."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "REV",
+          "bookName": "Apocalypse",
+          "chapter": 21,
+          "startVerse": 4,
+          "endVerse": 4,
+          "translationId": "LSG",
+          "quotedText": "Il essuiera toute larme de leurs yeux, et la mort ne sera plus…"
+        }
+      ],
+      "reflectionQuestion": "Quelle question te reste-t-il sur le problème du mal ?",
+      "relatedStudyIds": ["jesus_christ_001", "grace_foi_001"]
+    }
+  ]
+}

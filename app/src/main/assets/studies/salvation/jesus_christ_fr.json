@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "studyId": "jesus_christ_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Qui est Jésus-Christ ?",
+  "subtitle": "Témoignage des Évangiles et des épîtres",
+  "description": "Compare ce que Jésus affirme de lui-même avec les récits de sa vie, de sa mort et de sa résurrection.",
+  "categoryId": "salvation",
+  "tags": ["jesus", "christologie", "incarnation", "salut"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 10,
+  "editorialStatus": "DEMO",
+  "startNodeId": "jc_node_1",
+  "prerequisiteStudyIds": ["origine_mal_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "jc_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Pour toi aujourd'hui, qui est Jésus de Nazareth ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "jc_c1",
+          "label": "Un grand maître moral et un prophète inspirant.",
+          "feedback": "Examinons si les textes évangéliques permettent de s'arrêter là.",
+          "nextNodeId": "jc_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "jc_c2",
+          "label": "Le Fils de Dieu venu sauver l'humanité.",
+          "feedback": "Voyons comment les Écritures articulent sa divinité et son humanité.",
+          "nextNodeId": "jc_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "jc_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Jean 1:1-14 associe la « Parole » créatrice à une personne faite chair. Que signifie ce texte dans son contexte ?",
+      "contextText": "Le prologue de Jean reprend les premiers mots de la Genèse (« Au commencement ») pour désigner le Christ.",
+      "proposedInterpretation": "La foi adventiste confesse Jésus pleinement Dieu et pleinement homme, notre Créateur et Rédempteur.",
+      "verseReferences": [
+        {
+          "bookId": "JHN",
+          "bookName": "Jean",
+          "chapter": 1,
+          "startVerse": 1,
+          "endVerse": 14,
+          "translationId": "LSG",
+          "quotedText": "Au commencement était la Parole, et la Parole était avec Dieu, et la Parole était Dieu… Et la Parole a été faite chair, et elle a habité parmi nous, pleine de grâce et de vérité.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "jc_c3",
+          "label": "Jean affirme l'identité divine de Jésus et sa venue humaine.",
+          "feedback": "C'est le cœur du prologue johannique.",
+          "nextNodeId": "jc_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Incarnation — Parole faite chair"
+        },
+        {
+          "id": "jc_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "C'est une affirmation exigeante. Regardons aussi Philippiens 2:5-8.",
+          "nextNodeId": "jc_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "jc_node_3",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Pourquoi l'abaissement de Jésus en Philippiens 2:6-8 est-il central pour comprendre le caractère de Dieu ?",
+      "verseReferences": [
+        {
+          "bookId": "PHP",
+          "bookName": "Philippiens",
+          "chapter": 2,
+          "startVerse": 6,
+          "endVerse": 8,
+          "translationId": "LSG",
+          "quotedText": "…existant en forme de Dieu, n'a point regardé comme une proie à arracher d'être égal avec Dieu, mais s'est dépouillé lui-même, en prenant une forme de serviteur, en devenant semblable aux hommes… il s'est humilié lui-même, se rendant obéissant jusqu'à la mort, même jusqu'à la mort de la croix.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "jc_c5",
+          "label": "Dieu se révèle par l'humilité et le don de soi, non par la domination.",
+          "feedback": "Ce renversement des valeurs répond directement aux accusations contre Dieu.",
+          "nextNodeId": "jc_node_4",
+          "kind": "STANDARD",
+          "unlockedNotion": "Kénose — Service et croix"
+        },
+        {
+          "id": "jc_c6",
+          "label": "Revenir à la question précédente",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "jc_node_4",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Comment résumes-tu la personne et l'œuvre de Jésus après avoir lu ces passages ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "jc_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "jc_conclusion_1",
+      "title": "Synthèse — Jésus, Dieu avec nous",
+      "summary": "Les Écritures présentent Jésus-Christ comme le Fils éternel devenu pleinement humain pour révéler l'amour du Père et offrir le salut.",
+      "reasoningSteps": [
+        "Jean 1 relie la Parole créatrice à l'incarnation.",
+        "Philippiens 2 décrit l'abaissement volontaire jusqu'à la croix."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "JHN",
+          "bookName": "Jean",
+          "chapter": 3,
+          "startVerse": 16,
+          "endVerse": 16,
+          "translationId": "LSG",
+          "quotedText": "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle."
+        }
+      ],
+      "reflectionQuestion": "Qu'est-ce qui te touche ou t'interroge le plus dans la figure de Jésus ?",
+      "relatedStudyIds": ["grace_foi_001", "loi_grace_001"]
+    }
+  ]
+}

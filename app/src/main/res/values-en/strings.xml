@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">Sola Scriptura</string>
+    <string name="app_subtitle">Maieutics</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_studies">Studies</string>
+    <string name="nav_truth_tree">Tree</string>
+    <string name="nav_notebook">Notebook</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Choose your study space.</string>
+    <string name="onboarding_subtitle">An offline Socratic Bible study journey at your own pace.</string>
+    <string name="onboarding_method_title">The maieutic method</string>
+    <string name="onboarding_method_desc">Ask honest questions, examine passages in context, compare Scriptures, and build your own synthesis without pressure.</string>
+    <string name="onboarding_perspective_note">Seventh-day Adventist perspective clearly separated between biblical text, historical context, proposed interpretation, and your personal view.</string>
+    <string name="onboarding_language_label">Interface language</string>
+    <string name="onboarding_start_button">Begin studying</string>
+    <string name="onboarding_preview_sample">\"According to your current understanding, what happens after death?\"</string>
+
+    <!-- Home -->
+    <string name="home_welcome_title">Peace &amp; Careful Inquiry</string>
+    <string name="home_welcome_subtitle">Explore Scripture through dialogue and reflection</string>
+    <string name="home_resume_title">Resume study</string>
+    <string name="home_resume_cta">Continue</string>
+    <string name="home_start_first_cta">Explore your first study</string>
+    <string name="home_progress_title">Overall progress</string>
+    <string name="home_daily_challenge_title">Daily Bible challenge</string>
+    <string name="home_recommended_title">Recommended studies</string>
+    <string name="home_new_downloads_title">Newly downloaded studies</string>
+    <string name="home_categories_title">Study seasons</string>
+    <string name="home_notebook_quick">Reflection notebook</string>
+    <string name="home_notebook_quick_sub">Conclusions, questions, and key passages</string>
+    <string name="home_progress_detail">View statistics</string>
+
+    <!-- Studies & Library -->
+    <string name="studies_title">Study Library</string>
+    <string name="studies_search_hint">Search a study, topic, or verse…</string>
+    <string name="studies_all_seasons">All</string>
+    <string name="studies_empty">No studies match your search.</string>
+    <string name="studies_offline_ready">Offline</string>
+    <string name="studies_minutes_format">%1$d min</string>
+    <string name="studies_perspective_badge">SDA Perspective</string>
+    <string name="studies_demo_badge">Demo Study</string>
+    <string name="studies_reviewed_badge">Reviewed</string>
+    <string name="studies_detail_start">Start dialogue</string>
+    <string name="studies_detail_resume">Resume dialogue</string>
+    <string name="studies_detail_restart">Restart</string>
+    <string name="studies_detail_duel">Verse Duel</string>
+    <string name="studies_detail_investigation">Bible Investigation</string>
+    <string name="studies_detail_distinction_title">Methodological clarity</string>
+    <string name="studies_detail_distinction_body">Every step separates the quoted biblical text, historical and literary context, proposed interpretation (SDA perspective), and your own conclusion.</string>
+
+    <!-- Dialogue Engine -->
+    <string name="dialogue_phase_irony">Phase 1 · Initial Question</string>
+    <string name="dialogue_phase_elenchus">Phase 2 · Textual Examination</string>
+    <string name="dialogue_phase_maieutics">Phase 3 · Maieutics</string>
+    <string name="dialogue_phase_synthesis">Phase 4 · Synthesis</string>
+    <string name="dialogue_phase_reflection">Personal Reflection</string>
+    <string name="dialogue_back">Previous</string>
+    <string name="dialogue_save_later">Save</string>
+    <string name="dialogue_quit">Quit</string>
+    <string name="dialogue_history">History</string>
+    <string name="dialogue_context_button">Examine context</string>
+    <string name="dialogue_compare_button">Compare passages</string>
+    <string name="dialogue_not_convinced">I am not convinced</string>
+    <string name="dialogue_dont_know">I do not know the answer</string>
+    <string name="dialogue_prev_question">Return to previous question</string>
+    <string name="dialogue_layer_bible">Biblical Text</string>
+    <string name="dialogue_layer_context">Historical &amp; Literary Context</string>
+    <string name="dialogue_layer_interpretation">Proposed Interpretation (SDA)</string>
+    <string name="dialogue_layer_personal">Your Personal View</string>
+    <string name="dialogue_personal_conclusion_hint">Write your own conclusion or note remaining questions…</string>
+    <string name="dialogue_save_conclusion">Save to notebook</string>
+    <string name="dialogue_mark_unconvinced">Note that I remain unconvinced</string>
+    <string name="dialogue_complete_study">Complete study</string>
+    <string name="dialogue_next_study">Continue to related study</string>
+
+    <!-- Duel & Investigation -->
+    <string name="duel_title">Verse Duel</string>
+    <string name="duel_passage_a">Passage A</string>
+    <string name="duel_passage_b">Passage B</string>
+    <string name="duel_analysis_prompt">Analysis question</string>
+    <string name="duel_reflection_hint">Compare both passages in context…</string>
+    <string name="duel_save_synthesis">Save comparison</string>
+    <string name="investigation_title">Bible Investigation</string>
+    <string name="investigation_central_question">Central question</string>
+    <string name="investigation_clues">Scriptural clues</string>
+    <string name="investigation_argument_hint">Connect the passages and build your argument…</string>
+    <string name="investigation_save">Save investigation</string>
+
+    <!-- Truth Tree -->
+    <string name="truth_tree_title">Truth Tree</string>
+    <string name="truth_tree_subtitle">Topic relationships generated from local studies</string>
+    <string name="truth_tree_legend_completed">Completed</string>
+    <string name="truth_tree_legend_in_progress">In progress</string>
+    <string name="truth_tree_legend_unstarted">Discover</string>
+    <string name="truth_tree_open_study">Open study</string>
+
+    <!-- Notebook -->
+    <string name="notebook_title">Reflection Notebook</string>
+    <string name="notebook_add_note">New note</string>
+    <string name="notebook_export">Export</string>
+    <string name="notebook_empty_title">Your notebook is ready</string>
+    <string name="notebook_empty_desc">Save your conclusions, open questions, key passages, or difficulties encountered during study.</string>
+    <string name="notebook_type_all">All</string>
+    <string name="notebook_type_conclusion">Conclusions</string>
+    <string name="notebook_type_question">Questions</string>
+    <string name="notebook_type_note">Notes</string>
+    <string name="notebook_type_verse">Passages</string>
+    <string name="notebook_type_difficulty">Difficulties</string>
+    <string name="notebook_type_favorite">Favorites</string>
+
+    <!-- Daily Challenge & Progress -->
+    <string name="daily_title">Daily Bible Challenge</string>
+    <string name="daily_offline_badge">100% offline · Deterministic</string>
+    <string name="daily_mark_done">Mark as reflected</string>
+    <string name="progress_title">Your Journey</string>
+    <string name="progress_started">Studies started</string>
+    <string name="progress_completed">Studies completed</string>
+    <string name="progress_in_progress">In progress</string>
+    <string name="progress_time">Estimated study time</string>
+    <string name="progress_verses">References examined</string>
+    <string name="progress_notes">Notions recorded</string>
+
+    <!-- Settings & Account -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_appearance">Appearance</string>
+    <string name="settings_section_study">Study Preferences</string>
+    <string name="settings_section_account">Account &amp; Sync</string>
+    <string name="settings_section_storage">Offline Storage</string>
+    <string name="settings_section_privacy">Privacy</string>
+    <string name="account_title">Appwrite Cloud Account</string>
+    <string name="account_optional_notice">Creating an account is completely optional. All local studies remain available offline.</string>
+    <string name="account_unconfigured_notice">Appwrite Cloud project is not yet configured in BuildConfig. The app runs fully in offline local mode.</string>
+    <string name="account_sign_in">Sign in</string>
+    <string name="account_create">Create account</string>
+    <string name="account_sign_out">Sign out</string>
+    <string name="account_sync_now">Sync now</string>
+    <string name="account_transfer_local">Transfer local progress</string>
+
+    <!-- Errors -->
+    <string name="error_no_network">No internet connection. Your local data remains accessible.</string>
+    <string name="error_appwrite_unconfigured">Remote sync is not configured (offline mode active).</string>
+    <string name="error_invalid_json">The study file is invalid and did not replace existing data.</string>
+    <string name="error_generic">An error occurred. Please try again later.</string>
+</resources>

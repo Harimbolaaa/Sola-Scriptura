@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "studyId": "daniel_2_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Daniel 2 : La statue et le Royaume éternel",
+  "subtitle": "Le fil conducteur de l'histoire prophétique",
+  "description": "Découvre comment la vision de Nebucadnetsar éclaire la succession des empires et la promesse d'un royaume qui ne sera jamais détruit.",
+  "categoryId": "prophecies",
+  "tags": ["daniel", "prophetie", "royaume", "histoire"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 11,
+  "editorialStatus": "DEMO",
+  "startNodeId": "d2_node_1",
+  "prerequisiteStudyIds": ["bible_fiable_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "d2_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Lorsque tu entends parler de prophéties bibliques dans Daniel ou l'Apocalypse, qu'évoquent-elles pour toi ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "d2_c1",
+          "label": "Des symboles obscurs impossibles à interpréter avec certitude.",
+          "feedback": "Examinons si Daniel 2 laisse les symboles sans explication, ou s'il donne lui-même sa clé.",
+          "nextNodeId": "d2_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "d2_c2",
+          "label": "Une vue d'ensemble montrant que Dieu tient l'histoire.",
+          "feedback": "Vérifions directement la méthode d'interprétation donnée dans le texte.",
+          "nextNodeId": "d2_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "d2_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Dans Daniel 2:31-45, qui explique la signification de la tête d'or et des royaumes suivants ?",
+      "proposedInterpretation": "L'approche historiciste adventiste lit Daniel 2 comme la succession continue de Babylone, Médo-Perse, Grèce, Rome, puis l'Europe divisée jusqu'au royaume de Dieu.",
+      "verseReferences": [
+        {
+          "bookId": "DAN",
+          "bookName": "Daniel",
+          "chapter": 2,
+          "startVerse": 38,
+          "endVerse": 44,
+          "translationId": "LSG",
+          "quotedText": "…c'est toi qui es la tête d'or. Après toi, il s'élèvera un autre royaume, moindre que toi ; puis un troisième royaume, qui sera d'airain… Il y aura un quatrième royaume, fort comme du fer… Dans le temps de ces rois, le Dieu des cieux suscitera un royaume qui ne sera jamais détruit…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "d2_c3",
+          "label": "Le texte biblique donne lui-même la clé : les métaux représentent des royaumes successifs.",
+          "feedback": "Oui ! La Bible fournit son propre principe d'interprétation (Sola Scriptura).",
+          "nextNodeId": "d2_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Principe historiciste de Daniel 2"
+        },
+        {
+          "id": "d2_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Prendre le temps d'étudier les correspondances historiques entre Babylone, la Perse, la Grèce et Rome est très instructif.",
+          "nextNodeId": "d2_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "d2_node_3",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Quelle espérance personnelle retires-tu de la pierre détachée sans le secours d'aucune main ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "d2_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "d2_conclusion_1",
+      "title": "Synthèse — Le Royaume qui ne sera jamais détruit",
+      "summary": "Daniel 2 offre une vue panoramique de l'histoire humaine qui culmine non dans une utopie humaine, mais dans le royaume éternel établi par Dieu.",
+      "reasoningSteps": [
+        "La tête d'or est identifiée explicitement à Babylone (Daniel 2:38).",
+        "Les empires divisés ne parviennent pas à s'unir durablement (v. 43).",
+        "La pierre symbolise le règne éternel de Dieu (v. 44)."
+      ],
+      "verseReferences": [],
+      "reflectionQuestion": "Comment la certitude que l'histoire a une issue espérée influence-t-elle ta sérénité ?",
+      "relatedStudyIds": ["daniel_7_001"]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "studyId": "etat_des_morts_001",
+  "contentVersion": 1,
+  "locale": "en",
+  "title": "What happens after death?",
+  "subtitle": "A progressive biblical inquiry into death and resurrection",
+  "description": "Examine key Old and New Testament passages on human nature, the sleep of death, and the hope of resurrection.",
+  "categoryId": "forgotten_truths",
+  "tags": ["death", "resurrection", "hope", "soul"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 12,
+  "editorialStatus": "REVIEWED",
+  "startNodeId": "em_node_001",
+  "prerequisiteStudyIds": ["creation_001", "jesus_christ_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "reviewer": "Editorial Team",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "em_node_001",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "According to your current understanding, what happens immediately after a person dies?",
+      "contextText": "No view is judged here. We simply start from your present perspective and test it alongside Scripture.",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "em_c1",
+          "label": "The soul leaves the body and immediately continues conscious life.",
+          "feedback": "Let us examine how biblical writers describe death and resurrection.",
+          "nextNodeId": "em_node_002",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "em_c2",
+          "label": "The person rests unconsciously awaiting the resurrection.",
+          "feedback": "Let us check whether Scripture supports this and how challenging texts fit.",
+          "nextNodeId": "em_node_003",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "em_c3",
+          "label": "I do not know the answer",
+          "feedback": "Starting with an open mind is ideal for careful Bible inquiry.",
+          "nextNodeId": "em_node_002",
+          "kind": "DONT_KNOW"
+        }
+      ]
+    },
+    {
+      "id": "em_node_002",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Consider what the apostle Peter states at Pentecost about King David. How do you read Acts 2:29-34?",
+      "proposedInterpretation": "Seventh-day Adventist theology understands Scripture to teach conditional immortality: believers rest until the resurrection at Christ's return.",
+      "verseReferences": [
+        {
+          "bookId": "ACT",
+          "bookName": "Acts",
+          "chapter": 2,
+          "startVerse": 29,
+          "endVerse": 34,
+          "translationId": "KJV",
+          "quotedText": "Men and brethren, let me freely speak unto you of the patriarch David, that he is both dead and buried, and his sepulchre is with us unto this day… For David is not ascended into the heavens…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c4",
+          "label": "Peter explicitly notes that David had not yet ascended to heaven.",
+          "feedback": "Yes—Peter's argument rests on David's tomb still containing his remains.",
+          "nextNodeId": "em_node_003",
+          "kind": "STANDARD",
+          "unlockedNotion": "Acts 2:34 — David not ascended"
+        },
+        {
+          "id": "em_c6",
+          "label": "I am not convinced",
+          "feedback": "That is completely fair. Let us compare this with Jesus' words about Lazarus and Paul's letter to the Thessalonians.",
+          "nextNodeId": "em_node_003",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "em_node_003",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Why does Jesus describe Lazarus' death as sleep in John 11:11-14, and where does Paul place our reunion hope in 1 Thessalonians 4:13-17?",
+      "verseReferences": [
+        {
+          "bookId": "JHN",
+          "bookName": "John",
+          "chapter": 11,
+          "startVerse": 11,
+          "endVerse": 14,
+          "translationId": "KJV",
+          "quotedText": "Our friend Lazarus sleepeth; but I go, that I may awake him out of sleep… Then said Jesus unto them plainly, Lazarus is dead.",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "1TH",
+          "bookName": "1 Thessalonians",
+          "chapter": 4,
+          "startVerse": 13,
+          "endVerse": 17,
+          "translationId": "KJV",
+          "quotedText": "…the dead in Christ shall rise first: Then we which are alive and remain shall be caught up together with them…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c7",
+          "label": "Death is portrayed as unconscious sleep until Christ returns.",
+          "feedback": "Both Jesus and Paul connect waking up with Christ's coming.",
+          "nextNodeId": "em_node_004",
+          "kind": "STANDARD",
+          "unlockedNotion": "Resurrection hope at Christ's return"
+        },
+        {
+          "id": "em_c9",
+          "label": "Return to previous question",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "em_node_004",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Here are the passages we examined. What conclusion seems best supported by their context?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "em_conclusion_001",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "em_conclusion_001",
+      "title": "Synthesis — Sleep of death and resurrection hope",
+      "summary": "Across Genesis, Acts, John, and 1 Thessalonians, death is portrayed as a temporary unconscious rest awaiting the resurrection at Christ's return.",
+      "reasoningSteps": [
+        "Peter testifies that David had not ascended to heaven (Acts 2:34).",
+        "Jesus compares death to sleep awaiting awakening (John 11:11-14).",
+        "Paul places believer reunion at the Second Coming (1 Thessalonians 4:16-17)."
+      ],
+      "verseReferences": [],
+      "reflectionQuestion": "How does focusing on the resurrection shape your view of Christian hope?",
+      "relatedStudyIds": ["sabbat_001", "sanctuaire_001"]
+    }
+  ]
+}

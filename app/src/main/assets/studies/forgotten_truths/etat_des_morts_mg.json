@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "studyId": "etat_des_morts_001",
+  "contentVersion": 1,
+  "locale": "mg",
+  "title": "Inona no mitranga aorian'ny fahafatesana ?",
+  "subtitle": "Fandinihana ara-Baiboly miandalana momba ny fahafatesana sy ny fitsanganana",
+  "description": "Diniho ireo andinin-tSoratra Masina momba ny fanahy, ny torimason'ny fahafatesana ary ny fanantenana ny fitsanganana amin'ny maty.",
+  "categoryId": "forgotten_truths",
+  "tags": ["fahafatesana", "fitsanganana", "fanantenana"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 12,
+  "editorialStatus": "REVIEWED",
+  "startNodeId": "em_node_001",
+  "prerequisiteStudyIds": ["creation_001", "jesus_christ_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "em_node_001",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Araka ny fahatakaranao ankehitriny, inona no mitranga avy hatrany rehefa maty ny olona iray ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "em_c1",
+          "label": "Ny fanahy dia miala amin'ny vatana ka mitohy miaina sy mahatsiaro.",
+          "feedback": "Andeha hodinihintsika izay lazain'ny Soratra Masina momba izany.",
+          "nextNodeId": "em_node_002",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "em_c2",
+          "label": "Matory tsy mahatsiaro tena ny maty mandra-pahatongan'ny fitsanganana.",
+          "feedback": "Andeha hojerentsika ny fanamarinana ara-Baiboly.",
+          "nextNodeId": "em_node_003",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "em_c3",
+          "label": "Tsy haiko ny valiny",
+          "feedback": "Tsara ny manomboka amin'ny fandinihana tsy miangatra ny lahatsoratra.",
+          "nextNodeId": "em_node_002",
+          "kind": "DONT_KNOW"
+        }
+      ]
+    },
+    {
+      "id": "em_node_002",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Inona no nambaran'i Petera momba an'i Davida mpanjaka ao amin'ny Asan'ny Apostoly 2:29-34 ?",
+      "proposedInterpretation": "Araka ny fijery Advantista, mbola tsy niakatra tany an-danitra i Davida fa miandry ny fitsanganana amin'ny andro farany.",
+      "verseReferences": [
+        {
+          "bookId": "ACT",
+          "bookName": "Asan'ny Apostoly",
+          "chapter": 2,
+          "startVerse": 29,
+          "endVerse": 34,
+          "translationId": "MG1865",
+          "quotedText": "…fa ny amin'i Davida patriarka dia efa maty izy ka nalevina, ary ny fasany dia eto amintsika mandraka androany… Fa Davida tsy mba niakatra tany an-danitra…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c4",
+          "label": "Mazava fa mbola tsy niakatra tany an-danitra i Davida hoy i Petera.",
+          "feedback": "Izany indrindra no porofo nentin'i Petera tamin'ny andro Pentekosta.",
+          "nextNodeId": "em_node_003",
+          "kind": "STANDARD",
+          "unlockedNotion": "Asa 2:34 — Mbola tsy niakatra i Davida"
+        },
+        {
+          "id": "em_c6",
+          "label": "Mbola tsy resy lahatra aho",
+          "feedback": "Ara-dalàna izany. Andeha hodinihintsika koa ny tenin'i Jesosy momba an'i Lazarosy.",
+          "nextNodeId": "em_node_003",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "em_node_003",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Nahoana i Jesosy no niantso ny fahafatesan'i Lazarosy hoe « matory » ao amin'ny Jaona 11:11-14 ?",
+      "verseReferences": [
+        {
+          "bookId": "JHN",
+          "bookName": "Jaona",
+          "chapter": 11,
+          "startVerse": 11,
+          "endVerse": 14,
+          "translationId": "MG1865",
+          "quotedText": "Matory Lazarosy sakaizantsika ; fa handeha Aho hamoha azy… Dia nolazain'i Jesosy tsotra taminy hoe : Maty Lazarosy.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "em_c7",
+          "label": "Satria torimaso miandry ny famohazana amin'ny fitsanganana ny fahafatesana.",
+          "feedback": "Mifanaraka tanteraka amin'ny 1 Tesaloniana 4:13-17 izany.",
+          "nextNodeId": "em_node_004",
+          "kind": "STANDARD",
+          "unlockedNotion": "Ny fahafatesana dia torimaso (Jaona 11)"
+        },
+        {
+          "id": "em_c9",
+          "label": "Hiverina amin'ny fanontaniana teo aloha",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "em_node_004",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Ireo ny andininy nodinihina. Inona ny fehin-kevitra hitanao fa manakaiky indrindra ny Soratra Masina ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "em_conclusion_001",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "em_conclusion_001",
+      "title": "Fehin-kevitra — Torimaso sy fanantenana ny fitsanganana",
+      "summary": "Maneho ny Baiboly fa fiatoana tsy mahatsiaro tena ny fahafatesana, ary ny fitsanganana amin'ny fiverenan'i Kristy no fanantenana lehibe.",
+      "reasoningSteps": [
+        "Asa 2:34 : Mbola tsy niakatra tany an-danitra i Davida.",
+        "Jaona 11:11-14 : Nampitaha ny fahafatesana tamin'ny torimaso i Jesosy."
+      ],
+      "verseReferences": [],
+      "reflectionQuestion": "Ahoana no anampian'ny fanantenana ny fitsanganana anao eo amin'ny fiainana ?",
+      "relatedStudyIds": ["sabbat_001"]
+    }
+  ]
+}

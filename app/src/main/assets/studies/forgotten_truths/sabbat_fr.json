@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "studyId": "sabbat_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Pourquoi le Sabbat ?",
+  "subtitle": "Le septième jour de la Genèse aux Évangiles",
+  "description": "Enquête biblique sur l'institution du septième jour, sa place dans le Décalogue et la pratique de Jésus et des apôtres.",
+  "categoryId": "forgotten_truths",
+  "tags": ["sabbat", "creation", "loi", "septieme_jour"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 12,
+  "editorialStatus": "REVIEWED",
+  "startNodeId": "sb_node_1",
+  "prerequisiteStudyIds": ["creation_001", "loi_grace_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "sb_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Selon toi, le Sabbat du septième jour concerne-t-il uniquement le peuple d'Israël dans l'Ancien Testament, ou a-t-il une portée universelle ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "sb_c1",
+          "label": "Il a été donné uniquement aux Juifs au mont Sinaï.",
+          "feedback": "Vérifions chronologiquement où et pour qui le septième jour apparaît pour la première fois dans la Bible.",
+          "nextNodeId": "sb_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "sb_c2",
+          "label": "Il remonte à la Création pour toute l'humanité.",
+          "feedback": "Examinons les textes qui appuient cette continuité.",
+          "nextNodeId": "sb_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "sb_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Quand le septième jour est-il béni et sanctifié, et comment Jésus le définit-il en Marc 2:27 ?",
+      "proposedInterpretation": "Les adventistes observent le Sabbat du septième jour (du vendredi soir au samedi soir) comme mémorial de la Création et signe de libération en Christ.",
+      "verseReferences": [
+        {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 2,
+          "startVerse": 2,
+          "endVerse": 3,
+          "translationId": "LSG",
+          "quotedText": "Dieu bénit le septième jour, et il le sanctifia, parce qu'en ce jour il se reposa de toute son œuvre…",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "MRK",
+          "bookName": "Marc",
+          "chapter": 2,
+          "startVerse": 27,
+          "endVerse": 28,
+          "translationId": "LSG",
+          "quotedText": "Puis il leur dit : Le sabbat a été fait pour l'homme, et non l'homme pour le sabbat, de sorte que le Fils de l'homme est maître même du sabbat.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "sb_c3",
+          "label": "Jésus dit « pour l'homme » (l'humanité), en écho à la Genèse.",
+          "feedback": "Effectivement, bien avant Israël, Adam et Ève représentent toute l'humanité.",
+          "nextNodeId": "sb_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Le Sabbat fait pour l'humanité (Marc 2:27)"
+        },
+        {
+          "id": "sb_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Beaucoup de chrétiens se demandent aussi si le Nouveau Testament n'a pas déplacé le jour au dimanche. Examinons Actes et Luc.",
+          "nextNodeId": "sb_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "sb_node_3",
+      "phase": "MAIEUTICS",
+      "type": "SCRIPTURE",
+      "speakerText": "Quelle était la coutume habituelle de Jésus (Luc 4:16) et de Paul face aux non-Juifs à Antioche (Actes 13:42-44) ?",
+      "verseReferences": [
+        {
+          "bookId": "LUK",
+          "bookName": "Luc",
+          "chapter": 4,
+          "startVerse": 16,
+          "endVerse": 16,
+          "translationId": "LSG",
+          "quotedText": "…il entra dans la synagogue le jour du sabbat, selon sa coutume, et se leva pour faire la lecture.",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "ACT",
+          "bookName": "Actes",
+          "chapter": 13,
+          "startVerse": 42,
+          "endVerse": 44,
+          "translationId": "LSG",
+          "quotedText": "…les païens les prièrent de leur parler le sabbat suivant des mêmes choses… Le sabbat suivant, presque toute la ville se rassembla pour entendre la parole de Dieu.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "sb_c5",
+          "label": "Jésus et Paul continuaient à se réunir le sabbat, même avec les païens.",
+          "feedback": "S'il y avait eu un changement vers le premier jour, Paul l'aurait proposé dès Antioche.",
+          "nextNodeId": "sb_node_4",
+          "kind": "STANDARD",
+          "unlockedNotion": "Pratique apostolique du Sabbat"
+        },
+        {
+          "id": "sb_c6",
+          "label": "Revenir à la question précédente",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "sb_node_4",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Quelle place le Sabbat occupe-t-il à la lumière de la Création, du Sinaï et des Évangiles ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "sb_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "sb_conclusion_1",
+      "title": "Synthèse — Un temps sanctifié dès la Création",
+      "summary": "Institué en Éden pour l'humanité, rappelé au Sinaï comme signe de création et de libération, et vécu par Jésus comme un jour de grâce et de guérison, le septième jour demeure un rendez-vous relationnel.",
+      "reasoningSteps": [
+        "Genèse 2:2-3 précède l'existence du peuple d'Israël.",
+        "Marc 2:27 affirme que le sabbat est fait pour l'humanité.",
+        "Luc 4:16 et Actes 13:42-44 montrent la continuité dans l'Église primitive."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "EXO",
+          "bookName": "Exode",
+          "chapter": 20,
+          "startVerse": 8,
+          "endVerse": 11,
+          "translationId": "LSG",
+          "quotedText": "Souviens-toi du jour du repos, pour le sanctifier…"
+        }
+      ],
+      "reflectionQuestion": "Qu'est-ce qui changerait dans ton rythme hebdomadaire si tu recevais ce jour comme un cadeau ?",
+      "relatedStudyIds": ["apocalypse_13_001"]
+    }
+  ],
+  "investigation": {
+    "id": "sb_inv_1",
+    "centralQuestion": "Le septième jour a-t-il une place particulière dans toute la Bible ?",
+    "clues": [
+      {
+        "id": "sb_clue_1",
+        "testamentSection": "Genèse",
+        "verseReference": {
+          "bookId": "GEN",
+          "bookName": "Genèse",
+          "chapter": 2,
+          "startVerse": 3,
+          "endVerse": 3,
+          "translationId": "LSG",
+          "quotedText": "Dieu bénit le septième jour, et il le sanctifia…"
+        },
+        "observationPrompt": "À quel moment de l'histoire humaine ce jour est-il mis à part ?",
+        "keyInsight": "À l'achèvement de la création, avant toute division nationale."
+      },
+      {
+        "id": "sb_clue_2",
+        "testamentSection": "Exode",
+        "verseReference": {
+          "bookId": "EXO",
+          "bookName": "Exode",
+          "chapter": 20,
+          "startVerse": 8,
+          "endVerse": 11,
+          "translationId": "LSG",
+          "quotedText": "Souviens-toi du jour du repos… Car en six jours l'Éternel a fait les cieux, la terre et la mer…"
+        },
+        "observationPrompt": "Pourquoi le commandement commence-t-il par « Souviens-toi » ?",
+        "keyInsight": "Il rappelle une institution déjà connue depuis la Création."
+      },
+      {
+        "id": "sb_clue_3",
+        "testamentSection": "Évangiles",
+        "verseReference": {
+          "bookId": "MRK",
+          "bookName": "Marc",
+          "chapter": 2,
+          "startVerse": 27,
+          "endVerse": 28,
+          "translationId": "LSG",
+          "quotedText": "Le sabbat a été fait pour l'homme…"
+        },
+        "observationPrompt": "Jésus abolit-il le sabbat ou corrige-t-il les ajouts légalistes ?",
+        "keyInsight": "Il libère le sabbat de ses fardeaux et s'en déclare le Seigneur."
+      },
+      {
+        "id": "sb_clue_4",
+        "testamentSection": "Actes",
+        "verseReference": {
+          "bookId": "ACT",
+          "bookName": "Actes",
+          "chapter": 17,
+          "startVerse": 2,
+          "endVerse": 2,
+          "translationId": "LSG",
+          "quotedText": "Paul y entra, selon sa coutume. Pendant trois sabbats, il discuta avec eux, d'après les Écritures…"
+        },
+        "observationPrompt": "Quelle était l'habitude missionnaire de Paul ?",
+        "keyInsight": "Enseigner les Écritures chaque sabbat."
+      },
+      {
+        "id": "sb_clue_5",
+        "testamentSection": "Épîtres",
+        "verseReference": {
+          "bookId": "HEB",
+          "bookName": "Hébreux",
+          "chapter": 4,
+          "startVerse": 9,
+          "endVerse": 10,
+          "translationId": "LSG",
+          "quotedText": "Il y a donc un repos de sabbat réservé au peuple de Dieu."
+        },
+        "observationPrompt": "Quel lien l'épître aux Hébreux fait-elle entre repos du sabbat et grâce ?",
+        "keyInsight": "Le sabbat exprime la cessation de nos propres œuvres pour entrer dans le repos de Dieu."
+      }
+    ],
+    "synthesisPrompt": "Relie ces 5 témoignages bibliques pour rédiger ton argumentation personnelle."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "studyId": "apocalypse_13_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Apocalypse 13 & 14 : Fidélité et espérance",
+  "subtitle": "L'adoration du Créateur au cœur des crises finales",
+  "description": "Étudie la structure symbolique d'Apocalypse 13–14, le message des trois anges et l'appel à adorer le Créateur.",
+  "categoryId": "prophecies",
+  "tags": ["apocalypse", "trois_anges", "fidelite", "esperance"],
+  "perspective": "SDA",
+  "difficulty": "INTERMEDIATE",
+  "estimatedMinutes": 12,
+  "editorialStatus": "DEMO",
+  "startNodeId": "ap_node_1",
+  "prerequisiteStudyIds": ["daniel_7_001", "sabbat_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "ap_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Quel est selon toi le message central du livre de l'Apocalypse ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "ap_c1",
+          "label": "Des fléaux effrayants et la fin du monde.",
+          "feedback": "Regardons dès le premier verset ce que signifie « Apocalypse » (révélation de Jésus-Christ) et le contraste entre le chapitre 13 et le chapitre 14.",
+          "nextNodeId": "ap_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "ap_c2",
+          "label": "La victoire de l'Agneau et l'appel à rester fidèle à Dieu.",
+          "feedback": "Examinons comment Apocalypse 14 répond directement à la crise décrite en Apocalypse 13.",
+          "nextNodeId": "ap_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "ap_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "En Apocalypse 14:6-7, quelle « bonne nouvelle éternelle » est proclamée juste après les pouvoirs coercitifs du chapitre 13 ?",
+      "proposedInterpretation": "Dans l'identité adventiste, le message des trois anges d'Apocalypse 14 appelle l'humanité à revenir à l'adoration du Créateur (en lien avec Exode 20:11) par la foi en Jésus.",
+      "verseReferences": [
+        {
+          "bookId": "REV",
+          "bookName": "Apocalypse",
+          "chapter": 14,
+          "startVerse": 6,
+          "endVerse": 7,
+          "translationId": "LSG",
+          "quotedText": "Je vis un autre ange qui volait par le milieu du ciel, ayant un Évangile éternel, pour l'annoncer aux habitants de la terre… Il disait d'une voix forte : Craignez Dieu, et donnez-lui gloire, car l'heure de son jugement est venue ; et adorez celui qui a fait le ciel, et la terre, et la mer, et les sources d'eaux.",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "REV",
+          "bookName": "Apocalypse",
+          "chapter": 14,
+          "startVerse": 12,
+          "endVerse": 12,
+          "translationId": "LSG",
+          "quotedText": "C'est ici la persévérance des saints, qui gardent les commandements de Dieu et la foi de Jésus.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ap_c3",
+          "label": "L'Évangile éternel invite à la liberté d'adorer le Créateur, à l'opposé de la contrainte.",
+          "feedback": "Le vocabulaire « ciel, terre, mer, sources d'eaux » fait directement écho au commandement du Sabbat en Exode 20:11.",
+          "nextNodeId": "ap_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Évangile éternel et adoration du Créateur"
+        },
+        {
+          "id": "ap_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Ces liens intertextuels entre Exode, Daniel et Apocalypse méritent d'être médités sans précipitation.",
+          "nextNodeId": "ap_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "ap_node_3",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Quel équilibre vois-tu en Apocalypse 14:12 entre « garder les commandements de Dieu » et « la foi de Jésus » ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "ap_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "ap_conclusion_1",
+      "title": "Synthèse — Évangile éternel et persévérance",
+      "summary": "L'Apocalypse place au centre la fidélité libre envers Dieu le Créateur et la confiance en Jésus-Christ l'Agneau.",
+      "reasoningSteps": [
+        "Apocalypse 14:6 annonce un Évangile éternel avant toute mise en garde.",
+        "Apocalypse 14:7 reprend l'appel à adorer le Créateur.",
+        "Apocalypse 14:12 unit obéissance aimante et foi en Jésus."
+      ],
+      "verseReferences": [],
+      "reflectionQuestion": "Comment cultiver une foi paisible plutôt qu'une approche basée sur la peur ?",
+      "relatedStudyIds": ["bible_fiable_001"]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Sola Scriptura",
+  "description": "Étude biblique socratique hors ligne : maïeutique, élenchos, comparaison de passages et carnet de réflexion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

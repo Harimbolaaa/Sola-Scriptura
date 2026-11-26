@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "studyId": "daniel_7_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Daniel 7 : Les quatre bêtes et l'Ancien des jours",
+  "subtitle": "Du tribunal céleste au règne du Fils de l'homme",
+  "description": "Compare la vision de Daniel 7 avec celle de Daniel 2 et observe le jugement céleste en faveur des saints.",
+  "categoryId": "prophecies",
+  "tags": ["daniel", "jugement", "fils_de_lhomme", "prophetie"],
+  "perspective": "SDA",
+  "difficulty": "INTERMEDIATE",
+  "estimatedMinutes": 12,
+  "editorialStatus": "DEMO",
+  "startNodeId": "d7_node_1",
+  "prerequisiteStudyIds": ["daniel_2_001", "sanctuaire_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "d7_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Dans Daniel 7, la scène bascule des empires terrestres vers un tribunal dans le ciel. Qu'évoque pour toi le « jugement de Dieu » ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "d7_c1",
+          "label": "Une menace terrifiante où l'on craint d'être condamné.",
+          "feedback": "Examinons à qui le jugement de Daniel 7 est favorable selon le verset 22.",
+          "nextNodeId": "d7_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "d7_c2",
+          "label": "Une justice qui défend les opprimés et rétablit la vérité.",
+          "feedback": "Lisons ensemble Daniel 7:9-14 et 22.",
+          "nextNodeId": "d7_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "d7_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Selon Daniel 7:13-14 et 22, quel est le résultat du jugement céleste ?",
+      "proposedInterpretation": "Les adventistes identifient ce tribunal au jugement pré-adventif commencé dans le sanctuaire céleste, qui confirme la légitimité des sauvés devant l'univers.",
+      "verseReferences": [
+        {
+          "bookId": "DAN",
+          "bookName": "Daniel",
+          "chapter": 7,
+          "startVerse": 13,
+          "endVerse": 14,
+          "translationId": "LSG",
+          "quotedText": "Je regardai pendant mes visions nocturnes, et voici, sur les nuées des cieux arriva quelqu'un de semblable à un fils de l'homme ; il s'avança vers l'ancien des jours, et on le fit approcher de lui. On lui donna la domination, la gloire et le règne…",
+          "licenseId": "PUBLIC_DOMAIN"
+        },
+        {
+          "bookId": "DAN",
+          "bookName": "Daniel",
+          "chapter": 7,
+          "startVerse": 22,
+          "endVerse": 22,
+          "translationId": "LSG",
+          "quotedText": "…jusqu'au moment où l'ancien des jours vint donner droit aux saints du Très-Haut, et le temps arriva où les saints furent en possession du royaume.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "d7_c3",
+          "label": "Le jugement « donne droit aux saints » grâce au Fils de l'homme.",
+          "feedback": "C'est une bonne nouvelle : l'Avocat et le Juge agissent ensemble pour la délivrance.",
+          "nextNodeId": "d7_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Daniel 7:22 — Jugement en faveur des saints"
+        },
+        {
+          "id": "d7_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "La chronologie de Daniel 7–8 est complexe et gagne à être étudiée pas à pas avec le livre du sanctuaire.",
+          "nextNodeId": "d7_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "d7_node_3",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Comment Daniel 7 transforme-t-il ta perception du jugement biblique ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "d7_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "d7_conclusion_1",
+      "title": "Synthèse — Le tribunal en faveur des saints",
+      "summary": "Daniel 7 prolonge Daniel 2 et révèle que le jugement céleste met fin à l'oppression des puissances terrestres pour inaugurer le règne du Fils de l'homme.",
+      "reasoningSteps": [
+        "Parallèle entre les 4 métaux (Daniel 2) et les 4 bêtes (Daniel 7).",
+        "Le Fils de l'homme reçoit le royaume devant l'Ancien des jours."
+      ],
+      "verseReferences": [],
+      "reflectionQuestion": "En quoi savoir que le Christ est ton défenseur change-t-il ton rapport au jugement ?",
+      "relatedStudyIds": ["apocalypse_13_001"]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "studyId": "grace_foi_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Qu'est-ce que la grâce et la foi ?",
+  "subtitle": "Le don gratuit du salut et la place des œuvres",
+  "description": "Examine le dialogue entre Paul (Éphésiens 2) et Jacques (Jacques 2) sur la foi qui agit.",
+  "categoryId": "salvation",
+  "tags": ["grace", "foi", "oeuvres", "salut"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 10,
+  "editorialStatus": "DEMO",
+  "startNodeId": "gf_node_1",
+  "prerequisiteStudyIds": ["jesus_christ_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "gf_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Selon toi, comment un être humain est-il accepté par Dieu ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "gf_c1",
+          "label": "En faisant plus de bonnes actions que de mauvaises.",
+          "feedback": "Examinons ce que Paul écrit sur le mérite humain.",
+          "nextNodeId": "gf_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "gf_c2",
+          "label": "Par un don gratuit reçu par la confiance.",
+          "feedback": "Voyons comment Éphésiens 2 relie don gratuit et vie transformée.",
+          "nextNodeId": "gf_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "gf_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Lis Éphésiens 2:8-10 attentivement. Quelle différence Paul fait-il entre « par les œuvres » et « pour de bonnes œuvres » ?",
+      "contextText": "Le verset 8 exclut le mérite comme cause du salut ; le verset 10 présente les bonnes œuvres comme le fruit du salut.",
+      "proposedInterpretation": "Les adventistes affirment le salut par la grâce seule au moyen de la foi, qui produit nécessairement une vie renouvelée.",
+      "verseReferences": [
+        {
+          "bookId": "EPH",
+          "bookName": "Éphésiens",
+          "chapter": 2,
+          "startVerse": 8,
+          "endVerse": 10,
+          "translationId": "LSG",
+          "quotedText": "Car c'est par la grâce que vous êtes sauvés, par le moyen de la foi. Et cela ne vient pas de vous, c'est le don de Dieu. Ce n'est point par les œuvres, afin que personne ne se glorifie. Car nous sommes son ouvrage, ayant été créés en Jésus-Christ pour de bonnes œuvres…",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "gf_c3",
+          "label": "Les œuvres ne sont pas le prix d'entrée, mais la conséquence du salut.",
+          "feedback": "Cette distinction résout l'apparente tension avec l'épître de Jacques.",
+          "nextNodeId": "gf_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Grâce = racine, œuvres = fruit"
+        },
+        {
+          "id": "gf_c4",
+          "label": "Je veux examiner le contexte",
+          "feedback": "Dans Jacques 2:17, une foi sans actes est dite « morte » parce qu'une confiance réelle transforme le comportement.",
+          "nextNodeId": null,
+          "kind": "EXAMINE_CONTEXT"
+        }
+      ]
+    },
+    {
+      "id": "gf_node_3",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Quelle place donnes-tu désormais à la grâce et aux œuvres ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "gf_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "gf_conclusion_1",
+      "title": "Synthèse — Sauvés par grâce pour aimer",
+      "summary": "La grâce est l'initiative gratuite de Dieu ; la foi est la main qui reçoit ce don ; les bonnes œuvres en sont le témoignage vivant.",
+      "reasoningSteps": [
+        "Éphésiens 2:8-9 exclut l'orgueil du mérite.",
+        "Éphésiens 2:10 et Jacques 2 montrent qu'une foi vivante porte du fruit."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "EPH",
+          "bookName": "Éphésiens",
+          "chapter": 2,
+          "startVerse": 8,
+          "endVerse": 9,
+          "translationId": "LSG",
+          "quotedText": "Car c'est par la grâce que vous êtes sauvés, par le moyen de la foi."
+        }
+      ],
+      "reflectionQuestion": "Comment éviter à la fois le légalisme et l'indifférence morale ?",
+      "relatedStudyIds": ["loi_grace_001"]
+    }
+  ],
+  "verseDuels": [
+    {
+      "id": "gf_duel_1",
+      "title": "Paul et Jacques se contredisent-ils ?",
+      "passageA": {
+        "bookId": "ROM",
+        "bookName": "Romains",
+        "chapter": 3,
+        "startVerse": 28,
+        "endVerse": 28,
+        "translationId": "LSG",
+        "quotedText": "Car nous pensons que l'homme est justifié par la foi, sans les œuvres de la loi."
+      },
+      "contextA": "Paul combat l'idée qu'on puisse mériter le pardon devant Dieu.",
+      "passageB": {
+        "bookId": "JAS",
+        "bookName": "Jacques",
+        "chapter": 2,
+        "startVerse": 17,
+        "endVerse": 17,
+        "translationId": "LSG",
+        "quotedText": "Il en est ainsi de la foi : si elle n'a pas les œuvres, elle est morte en elle-même."
+      },
+      "contextB": "Jacques combat une foi purement verbale qui ignore le prochain dans le besoin.",
+      "analysisQuestion": "Paul et Jacques emploient-ils le mot « foi » et le mot « œuvres » dans le même sens ?",
+      "suggestedSynthesis": "Paul parle des œuvres méritoires avant le salut ; Jacques parle des œuvres de compassion comme preuve d'une foi authentique."
+    }
+  ]
+}

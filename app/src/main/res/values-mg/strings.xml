@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">Sola Scriptura</string>
+    <string name="app_subtitle">Maïeutique</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Fandraisana</string>
+    <string name="nav_studies">Fianarana</string>
+    <string name="nav_truth_tree">Hazo</string>
+    <string name="nav_notebook">Kahie</string>
+    <string name="nav_settings">Fikirakirana</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Fidio ny toeram-pianaranao.</string>
+    <string name="onboarding_subtitle">Fianarana Baiboly amin\'ny fomba sokratika tsy mila aterineto, araka ny fandaharam-potoananao.</string>
+    <string name="onboarding_method_title">Ny fomba maïeutika</string>
+    <string name="onboarding_method_desc">Mametraka fanontaniana, mandinika ny lahatsoratra araka ny teny manodidina, mampitaha andininy ary manorina ny fehin-kevitrao manokana.</string>
+    <string name="onboarding_perspective_note">Fomba fijery Advantista Mitandrina ny Andro Fahafito mazava tsara, manavaka ny lahatsoratry ny Baiboly, ny tantara, ny hevitra aroso ary ny hevitrao manokana.</string>
+    <string name="onboarding_language_label">Fiteny</string>
+    <string name="onboarding_start_button">Hanomboka hianatra</string>
+    <string name="onboarding_preview_sample">« Araka ny fahatakaranao ankehitriny, inona no mitranga aorian\'ny fahafatesana ? »</string>
+
+    <!-- Home -->
+    <string name="home_welcome_title">Fiadanana sy fandinihana</string>
+    <string name="home_welcome_subtitle">Diniho ny Soratra Masina amin\'ny alalan\'ny fifanakalozan-kevitra</string>
+    <string name="home_resume_title">Tohizo ny fianarana</string>
+    <string name="home_resume_cta">Hanohy</string>
+    <string name="home_start_first_cta">Hanomboka fianarana voalohany</string>
+    <string name="home_progress_title">Fandrosoana ankapobeny</string>
+    <string name="home_daily_challenge_title">Fanamby ara-Baiboly anio</string>
+    <string name="home_recommended_title">Fianarana atolotra</string>
+    <string name="home_new_downloads_title">Fianarana vaovao</string>
+    <string name="home_categories_title">Sokajy fianarana</string>
+    <string name="home_notebook_quick">Kahie fisaintsainana</string>
+    <string name="home_notebook_quick_sub">Fehin-kevitra, fanontaniana ary andininy manan-danja</string>
+    <string name="home_progress_detail">Hijery ny antontan\'isa</string>
+
+    <!-- Studies & Library -->
+    <string name="studies_title">Tranombokim-pianarana</string>
+    <string name="studies_search_hint">Hitady fianarana, lohahevitra, andininy…</string>
+    <string name="studies_all_seasons">Rehetra</string>
+    <string name="studies_empty">Tsy misy fianarana mifanaraka amin\'izany.</string>
+    <string name="studies_offline_ready">Tsy mila tambajotra</string>
+    <string name="studies_minutes_format">%1$d min</string>
+    <string name="studies_perspective_badge">Fijery SDA</string>
+    <string name="studies_demo_badge">Fianarana santatra</string>
+    <string name="studies_reviewed_badge">Voamarin-toetra</string>
+    <string name="studies_detail_start">Hanomboka fifanakalozana</string>
+    <string name="studies_detail_resume">Hanohy fifanakalozana</string>
+    <string name="studies_detail_restart">Hamerina hanomboka</string>
+    <string name="studies_detail_duel">Fampitahana andininy</string>
+    <string name="studies_detail_investigation">Famotorana ara-Baiboly</string>
+    <string name="studies_detail_distinction_title">Fomba fiasa mazava</string>
+    <string name="studies_detail_distinction_body">Ny dingana tsirairay dia manavaka ny Soratra Masina, ny teny manodidina, ny fanazavana aroso (SDA) ary ny fanapahan-kevitrao manokana.</string>
+
+    <!-- Dialogue Engine -->
+    <string name="dialogue_phase_irony">Dingana 1 · Fanontaniana voalohany</string>
+    <string name="dialogue_phase_elenchus">Dingana 2 · Fandinihana ny lahatsoratra</string>
+    <string name="dialogue_phase_maieutics">Dingana 3 · Maïeutika</string>
+    <string name="dialogue_phase_synthesis">Dingana 4 · Fehin-kevitra</string>
+    <string name="dialogue_phase_reflection">Fisaintsainana manokana</string>
+    <string name="dialogue_back">Teo aloha</string>
+    <string name="dialogue_save_later">Hitahiry</string>
+    <string name="dialogue_quit">Hivoaka</string>
+    <string name="dialogue_history">Tantara</string>
+    <string name="dialogue_context_button">Hijery ny teny manodidina</string>
+    <string name="dialogue_compare_button">Hampitaha andininy</string>
+    <string name="dialogue_not_convinced">Mbola tsy resy lahatra aho</string>
+    <string name="dialogue_dont_know">Tsy haiko ny valiny</string>
+    <string name="dialogue_prev_question">Hiverina amin\'ny fanontaniana teo aloha</string>
+    <string name="dialogue_layer_bible">Lahatsoratry ny Baiboly</string>
+    <string name="dialogue_layer_context">Tantara sy teny manodidina</string>
+    <string name="dialogue_layer_interpretation">Hevitra aroso (SDA)</string>
+    <string name="dialogue_layer_personal">Ny hevitrao manokana</string>
+    <string name="dialogue_personal_conclusion_hint">Soraty ny fehin-kevitrao na ny fanontanianao…</string>
+    <string name="dialogue_save_conclusion">Hitahiry ao amin\'ny kahie</string>
+    <string name="dialogue_mark_unconvinced">Mariho fa mbola misalasala aho</string>
+    <string name="dialogue_complete_study">Hamita ny fianarana</string>
+    <string name="dialogue_next_study">Hanohy amin\'ny fianarana manaraka</string>
+
+    <!-- Duel & Investigation -->
+    <string name="duel_title">Fampitahana andininy</string>
+    <string name="duel_passage_a">Andininy A</string>
+    <string name="duel_passage_b">Andininy B</string>
+    <string name="duel_analysis_prompt">Fanontaniana mandinika</string>
+    <string name="duel_reflection_hint">Ampitahao ireo lahatsoratra roa ireo…</string>
+    <string name="duel_save_synthesis">Hitahiry ny fampitahana</string>
+    <string name="investigation_title">Famotorana ara-Baiboly</string>
+    <string name="investigation_central_question">Fanontaniana fototra</string>
+    <string name="investigation_clues">Porofo ara-Baiboly</string>
+    <string name="investigation_argument_hint">Ampifandraiso ireo andininy ary manorina hevitra…</string>
+    <string name="investigation_save">Hitahiry ny famotorana</string>
+
+    <!-- Truth Tree -->
+    <string name="truth_tree_title">Hazon\'ny Fahamarinana</string>
+    <string name="truth_tree_subtitle">Fifandraisana avy amin\'ny fianarana eo an-toerana</string>
+    <string name="truth_tree_legend_completed">Vita</string>
+    <string name="truth_tree_legend_in_progress">An-dalana</string>
+    <string name="truth_tree_legend_unstarted">Ho fantarina</string>
+    <string name="truth_tree_open_study">Hanokatra fianarana</string>
+
+    <!-- Notebook -->
+    <string name="notebook_title">Kahie fisaintsainana</string>
+    <string name="notebook_add_note">Fanamarihana vaovao</string>
+    <string name="notebook_export">Hamoaka</string>
+    <string name="notebook_empty_title">Vonona ny kahienao</string>
+    <string name="notebook_empty_desc">Tehirizo eto ny fehin-kevitrao, ny fanontaniana, ny andininy manan-danja ary ny fahasarotana hita.</string>
+    <string name="notebook_type_all">Rehetra</string>
+    <string name="notebook_type_conclusion">Fehin-kevitra</string>
+    <string name="notebook_type_question">Fanontaniana</string>
+    <string name="notebook_type_note">Naoty</string>
+    <string name="notebook_type_verse">Andininy</string>
+    <string name="notebook_type_difficulty">Fahasarotana</string>
+    <string name="notebook_type_favorite">Tianao</string>
+
+    <!-- Daily Challenge & Progress -->
+    <string name="daily_title">Fanamby ara-Baiboly anio</string>
+    <string name="daily_offline_badge">100 % tsy mila tambajotra</string>
+    <string name="daily_mark_done">Mariho fa voasaintsaina</string>
+    <string name="progress_title">Ny dianao</string>
+    <string name="progress_started">Fianarana natomboka</string>
+    <string name="progress_completed">Fianarana vita</string>
+    <string name="progress_in_progress">An-dalana</string>
+    <string name="progress_time">Fotoana tombanana</string>
+    <string name="progress_verses">Andininy nodinihina</string>
+    <string name="progress_notes">Hevitra voatahiry</string>
+
+    <!-- Settings & Account -->
+    <string name="settings_title">Fikirakirana</string>
+    <string name="settings_section_appearance">Endrika</string>
+    <string name="settings_section_study">Safidy fianarana</string>
+    <string name="settings_section_account">Kaonty sy fampifanarahana</string>
+    <string name="settings_section_storage">Tahiry eo an-toerana</string>
+    <string name="settings_section_privacy">Tsiambaratelo</string>
+    <string name="account_title">Kaonty Appwrite Cloud</string>
+    <string name="account_optional_notice">Tsy voatery mamorona kaonty. Ny fianarana rehetra dia azo ampiasaina tsy mila tambajotra.</string>
+    <string name="account_unconfigured_notice">Mbola tsy voafaritra ny Appwrite Cloud ao amin\'ny BuildConfig. Mandeha tsara tsy mila tambajotra ny fampiharana.</string>
+    <string name="account_sign_in">Hiditra</string>
+    <string name="account_create">Hamorona kaonty</string>
+    <string name="account_sign_out">Hivoaka</string>
+    <string name="account_sync_now">Hampifanaraka izao</string>
+    <string name="account_transfer_local">Hamindra ny fandrosoana eto</string>
+
+    <!-- Errors -->
+    <string name="error_no_network">Tsy misy tambajotra. Mbola azo ampiasaina ny tahiry eto an-toerana.</string>
+    <string name="error_appwrite_unconfigured">Tsy mbola voafaritra ny fampifanarahana lavitra.</string>
+    <string name="error_invalid_json">Tsy mety ny rakitra fianarana ka tsy nosoloina ny taloha.</string>
+    <string name="error_generic">Nisy olana nitranga. Andramo indray.</string>
+</resources>

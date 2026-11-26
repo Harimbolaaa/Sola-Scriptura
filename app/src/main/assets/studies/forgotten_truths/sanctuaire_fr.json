@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "studyId": "sanctuaire_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "Le sanctuaire céleste",
+  "subtitle": "Le ministère d'intercession du Christ dans Hébreux",
+  "description": "Comprends comment le sanctuaire de l'Exode annonce l'œuvre sacerdotale actuelle de Jésus-Christ.",
+  "categoryId": "forgotten_truths",
+  "tags": ["sanctuaire", "hebreux", "intercession", "expiation"],
+  "perspective": "SDA",
+  "difficulty": "INTERMEDIATE",
+  "estimatedMinutes": 11,
+  "editorialStatus": "DEMO",
+  "startNodeId": "sn_node_1",
+  "prerequisiteStudyIds": ["grace_foi_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "sn_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Après son ascension, que fait Jésus aujourd'hui selon le Nouveau Testament ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "sn_c1",
+          "label": "Son œuvre s'est terminée à la croix ; il attend simplement son retour.",
+          "feedback": "La croix est le sacrifice unique et suffisant. Voyons cependant ce que l'épître aux Hébreux dit de son ministère actuel.",
+          "nextNodeId": "sn_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "sn_c2",
+          "label": "Il exerce un ministère de souverain sacrificateur dans le ciel.",
+          "feedback": "Examinons ensemble Hébreux 8 et 9.",
+          "nextNodeId": "sn_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "sn_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Quel lien Hébreux 8:1-5 établit-il entre le tabernacle terrestre de Moïse et le sanctuaire céleste ?",
+      "proposedInterpretation": "Dans la théologie adventiste, le sanctuaire terrestre est la maquette pédagogique du plan du salut ; depuis l'ascension, Jésus applique les mérites de la croix comme notre avocat dans le véritable sanctuaire.",
+      "verseReferences": [
+        {
+          "bookId": "HEB",
+          "bookName": "Hébreux",
+          "chapter": 8,
+          "startVerse": 1,
+          "endVerse": 5,
+          "translationId": "LSG",
+          "quotedText": "Le point capital de ce qui vient d'être dit, c'est que nous avons un tel souverain sacrificateur, qui s'est assis à la droite du trône de la majesté divine dans les cieux, comme ministre du sanctuaire et du véritable tabernacle, qui a été dressé par le Seigneur et non par un homme.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "sn_c3",
+          "label": "Le tabernacle de Moïse était l'image d'une réalité céleste où sert Jésus.",
+          "feedback": "C'est ce que l'auteur appelle « le point capital ».",
+          "nextNodeId": "sn_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Sacerdoce céleste du Christ"
+        },
+        {
+          "id": "sn_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Ce symbolisme demande du temps. Hébreux 4:16 en montre l'effet concret : s'approcher avec assurance du trône de la grâce.",
+          "nextNodeId": "sn_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "sn_node_3",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Quelle assurance personnelle tires-tu de la présence d'un Médiateur qui connaît nos faiblesses ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "sn_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "sn_conclusion_1",
+      "title": "Synthèse — Un Sauveur vivant qui intercède",
+      "summary": "La mort de Jésus sur la croix fonde le pardon, et son ministère céleste rend cette grâce accessible chaque jour aux croyants.",
+      "reasoningSteps": [
+        "Hébreux 8:1-2 désigne Jésus comme ministre du véritable sanctuaire.",
+        "Hébreux 7:25 rappelle qu'il peut sauver parfaitement ceux qui s'approchent de Dieu par lui."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "HEB",
+          "bookName": "Hébreux",
+          "chapter": 4,
+          "startVerse": 16,
+          "endVerse": 16,
+          "translationId": "LSG",
+          "quotedText": "Approchons-nous donc avec assurance du trône de la grâce…"
+        }
+      ],
+      "reflectionQuestion": "Comment le ministère d'intercession du Christ éclaire-t-il le jugement divin ?",
+      "relatedStudyIds": ["daniel_7_001"]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+<resources>
+    <string name="app_name">Sola Scriptura</string>
+    <string name="app_subtitle">Maïeutique</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_studies">Études</string>
+    <string name="nav_truth_tree">Arbre</string>
+    <string name="nav_notebook">Carnet</string>
+    <string name="nav_settings">Paramètres</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Choisis ton espace d\'étude.</string>
+    <string name="onboarding_subtitle">Une démarche socratique et biblique, hors ligne, à ton rythme.</string>
+    <string name="onboarding_method_title">La méthode maïeutique</string>
+    <string name="onboarding_method_desc">Questionner, examiner les textes dans leur contexte, comparer les passages et formuler ta propre synthèse — sans jamais être contraint.</string>
+    <string name="onboarding_perspective_note">Perspective théologique adventiste du septième jour clairement distinguée entre texte biblique, contexte, interprétation proposée et avis personnel.</string>
+    <string name="onboarding_language_label">Langue de l\'interface</string>
+    <string name="onboarding_start_button">Commencer l\'étude</string>
+    <string name="onboarding_preview_sample">« Selon ta compréhension actuelle, que se passe-t-il après la mort ? »</string>
+
+    <!-- Home -->
+    <string name="home_welcome_title">Paix et examen attentif</string>
+    <string name="home_welcome_subtitle">Explore les Écritures par la réflexion et le dialogue</string>
+    <string name="home_resume_title">Reprendre l\'étude</string>
+    <string name="home_resume_cta">Continuer</string>
+    <string name="home_start_first_cta">Découvrir une première étude</string>
+    <string name="home_progress_title">Progression générale</string>
+    <string name="home_daily_challenge_title">Défi biblique du jour</string>
+    <string name="home_recommended_title">Études recommandées</string>
+    <string name="home_new_downloads_title">Nouvelles études disponibles</string>
+    <string name="home_categories_title">Saisons d\'étude</string>
+    <string name="home_notebook_quick">Carnet de réflexion</string>
+    <string name="home_notebook_quick_sub">Conclusions, questions et passages clés</string>
+    <string name="home_progress_detail">Voir les statistiques</string>
+
+    <!-- Studies & Library -->
+    <string name="studies_title">Bibliothèque d\'études</string>
+    <string name="studies_search_hint">Rechercher une étude, un thème, un verset…</string>
+    <string name="studies_all_seasons">Toutes</string>
+    <string name="studies_empty">Aucune étude ne correspond à cette recherche.</string>
+    <string name="studies_offline_ready">Hors ligne</string>
+    <string name="studies_minutes_format">%1$d min</string>
+    <string name="studies_perspective_badge">Perspective SDA</string>
+    <string name="studies_demo_badge">Étude de démonstration</string>
+    <string name="studies_reviewed_badge">Relue</string>
+    <string name="studies_detail_start">Commencer le dialogue</string>
+    <string name="studies_detail_resume">Reprendre le dialogue</string>
+    <string name="studies_detail_restart">Recommencer</string>
+    <string name="studies_detail_duel">Duel de versets</string>
+    <string name="studies_detail_investigation">Enquête biblique</string>
+    <string name="studies_detail_distinction_title">Clarté méthodologique</string>
+    <string name="studies_detail_distinction_body">Chaque étape distingue le texte biblique cité, le contexte historique et littéraire, l\'interprétation proposée (perspective adventiste du 7e jour) et ton propre jugement.</string>
+
+    <!-- Dialogue Engine -->
+    <string name="dialogue_phase_irony">Phase 1 · Question initiale</string>
+    <string name="dialogue_phase_elenchus">Phase 2 · Confrontation au texte</string>
+    <string name="dialogue_phase_maieutics">Phase 3 · Maïeutique</string>
+    <string name="dialogue_phase_synthesis">Phase 4 · Synthèse</string>
+    <string name="dialogue_phase_reflection">Réflexion personnelle</string>
+    <string name="dialogue_back">Précédent</string>
+    <string name="dialogue_save_later">Enregistrer</string>
+    <string name="dialogue_quit">Quitter</string>
+    <string name="dialogue_history">Historique</string>
+    <string name="dialogue_context_button">Examiner le contexte</string>
+    <string name="dialogue_compare_button">Comparer les passages</string>
+    <string name="dialogue_not_convinced">Je ne suis pas convaincu</string>
+    <string name="dialogue_dont_know">Je ne connais pas la réponse</string>
+    <string name="dialogue_prev_question">Revenir à la question précédente</string>
+    <string name="dialogue_layer_bible">Texte biblique</string>
+    <string name="dialogue_layer_context">Contexte historique &amp; littéraire</string>
+    <string name="dialogue_layer_interpretation">Interprétation proposée (SDA)</string>
+    <string name="dialogue_layer_personal">Ton opinion personnelle</string>
+    <string name="dialogue_personal_conclusion_hint">Rédige ta propre conclusion ou note tes interrogations…</string>
+    <string name="dialogue_save_conclusion">Enregistrer dans mon carnet</string>
+    <string name="dialogue_mark_unconvinced">Noter que je reste réservé</string>
+    <string name="dialogue_complete_study">Terminer l\'étude</string>
+    <string name="dialogue_next_study">Poursuivre vers l\'étude liée</string>
+
+    <!-- Duel & Investigation -->
+    <string name="duel_title">Duel de versets</string>
+    <string name="duel_passage_a">Passage A</string>
+    <string name="duel_passage_b">Passage B</string>
+    <string name="duel_analysis_prompt">Question d\'analyse</string>
+    <string name="duel_reflection_hint">Compare les deux textes dans leur contexte…</string>
+    <string name="duel_save_synthesis">Enregistrer la comparaison</string>
+    <string name="investigation_title">Enquête biblique</string>
+    <string name="investigation_central_question">Question centrale</string>
+    <string name="investigation_clues">Indices bibliques</string>
+    <string name="investigation_argument_hint">Relie les passages et formule ton argumentation…</string>
+    <string name="investigation_save">Enregistrer l\'enquête</string>
+
+    <!-- Truth Tree -->
+    <string name="truth_tree_title">Arbre de vérité</string>
+    <string name="truth_tree_subtitle">Relations thématiques générées depuis tes études locales</string>
+    <string name="truth_tree_legend_completed">Étudiée</string>
+    <string name="truth_tree_legend_in_progress">En cours</string>
+    <string name="truth_tree_legend_unstarted">À découvrir</string>
+    <string name="truth_tree_open_study">Ouvrir l\'étude</string>
+
+    <!-- Notebook -->
+    <string name="notebook_title">Carnet de réflexion</string>
+    <string name="notebook_add_note">Nouvelle note</string>
+    <string name="notebook_export">Exporter</string>
+    <string name="notebook_empty_title">Ton carnet est prêt</string>
+    <string name="notebook_empty_desc">Enregistre tes conclusions, questions ouvertes, passages importants ou difficultés rencontrées pendant tes études.</string>
+    <string name="notebook_type_all">Tout</string>
+    <string name="notebook_type_conclusion">Conclusions</string>
+    <string name="notebook_type_question">Questions</string>
+    <string name="notebook_type_note">Notes</string>
+    <string name="notebook_type_verse">Passages</string>
+    <string name="notebook_type_difficulty">Difficultés</string>
+    <string name="notebook_type_favorite">Favoris</string>
+
+    <!-- Daily Challenge & Progress -->
+    <string name="daily_title">Défi biblique du jour</string>
+    <string name="daily_offline_badge">100 % hors ligne · Déterministe</string>
+    <string name="daily_mark_done">Marquer comme médité</string>
+    <string name="progress_title">Votre cheminement</string>
+    <string name="progress_started">Études commencées</string>
+    <string name="progress_completed">Études terminées</string>
+    <string name="progress_in_progress">En cours</string>
+    <string name="progress_time">Temps d\'étude estimé</string>
+    <string name="progress_verses">Références examinées</string>
+    <string name="progress_notes">Notions enregistrées</string>
+
+    <!-- Settings & Account -->
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_section_appearance">Apparence</string>
+    <string name="settings_section_study">Préférences d\'étude</string>
+    <string name="settings_section_account">Compte &amp; Synchronisation</string>
+    <string name="settings_section_storage">Stockage hors ligne</string>
+    <string name="settings_section_privacy">Confidentialité</string>
+    <string name="account_title">Compte Appwrite Cloud</string>
+    <string name="account_optional_notice">La création d\'un compte est entièrement facultative. Toutes les études locales restent accessibles hors ligne.</string>
+    <string name="account_unconfigured_notice">Le projet Appwrite Cloud n\'est pas encore configuré dans BuildConfig. L\'application fonctionne pleinement en mode local hors ligne.</string>
+    <string name="account_sign_in">Se connecter</string>
+    <string name="account_create">Créer un compte</string>
+    <string name="account_sign_out">Se déconnecter</string>
+    <string name="account_sync_now">Synchroniser maintenant</string>
+    <string name="account_transfer_local">Transférer ma progression locale</string>
+
+    <!-- Errors -->
+    <string name="error_no_network">Aucune connexion Internet. Tes données locales restent accessibles.</string>
+    <string name="error_appwrite_unconfigured">Synchronisation distante non configurée (mode hors ligne actif).</string>
+    <string name="error_invalid_json">Le fichier d\'étude est invalide et n\'a pas remplacé les données existantes.</string>
+    <string name="error_generic">Une erreur est survenue. Réessaie plus tard.</string>
+</resources>

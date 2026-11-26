@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "studyId": "loi_grace_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "La loi et la grâce",
+  "subtitle": "La grâce abolit-elle la loi morale ou la confirme-t-elle ?",
+  "description": "Examine le rôle du Décalogue après la croix selon Romains 3, Romains 7 et Matthieu 5.",
+  "categoryId": "salvation",
+  "tags": ["loi", "grace", "decalogue", "romains"],
+  "perspective": "SDA",
+  "difficulty": "INTERMEDIATE",
+  "estimatedMinutes": 10,
+  "editorialStatus": "DEMO",
+  "startNodeId": "lg_node_1",
+  "prerequisiteStudyIds": ["grace_foi_001"],
+  "metadata": {
+    "author": "Harimbola",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01"
+  },
+  "nodes": [
+    {
+      "id": "lg_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Puisque le salut vient par la grâce, les Dix Commandements ont-ils encore une place aujourd'hui ?",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "lg_c1",
+          "label": "Non, la grâce remplace entièrement la loi.",
+          "feedback": "Confrontons cette idée à une question directe posée par Paul lui-même.",
+          "nextNodeId": "lg_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "lg_c2",
+          "label": "Oui, mais pas comme moyen de salut.",
+          "feedback": "Vérifions ce que Romains 3:31 et 7:7-12 disent précisément.",
+          "nextNodeId": "lg_node_2",
+          "kind": "STANDARD"
+        }
+      ]
+    },
+    {
+      "id": "lg_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Paul vient d'affirmer que l'on est justifié par la foi. Comment répond-il à sa propre question en Romains 3:31 ?",
+      "proposedInterpretation": "La théologie adventiste distingue les lois cérémonielles (ombres du Christ accomplies à la croix) de la loi morale (reflet du caractère de Dieu).",
+      "verseReferences": [
+        {
+          "bookId": "ROM",
+          "bookName": "Romains",
+          "chapter": 3,
+          "startVerse": 31,
+          "endVerse": 31,
+          "translationId": "LSG",
+          "quotedText": "Anéantissons-nous donc la loi par la foi ? Loin de là ! Au contraire, nous confirmons la loi.",
+          "licenseId": "PUBLIC_DOMAIN"
+        }
+      ],
+      "choices": [
+        {
+          "id": "lg_c3",
+          "label": "La foi ne détruit pas la loi morale ; elle la confirme.",
+          "feedback": "Un miroir révèle une tache sans pouvoir la laver : la loi révèle le besoin de grâce, et la grâce restaure l'amour de la loi.",
+          "nextNodeId": "lg_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "La foi confirme la loi morale"
+        },
+        {
+          "id": "lg_c4",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "Il faut en effet distinguer la fonction de la loi dans le salut et sa fonction comme repère moral.",
+          "nextNodeId": "lg_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "lg_node_3",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Comment comprends-tu maintenant l'harmonie entre loi et grâce ?",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "lg_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "lg_conclusion_1",
+      "title": "Synthèse — Loi et grâce en harmonie",
+      "summary": "La loi montre le chemin juste mais ne sauve pas ; la grâce pardonne et écrit la loi de l'amour dans le cœur.",
+      "reasoningSteps": [
+        "Romains 3:31 rejette l'idée que la foi annule la loi.",
+        "Jésus résume toute la loi dans l'amour envers Dieu et le prochain."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "JHN",
+          "bookName": "Jean",
+          "chapter": 14,
+          "startVerse": 15,
+          "endVerse": 15,
+          "translationId": "LSG",
+          "quotedText": "Si vous m'aimez, gardez mes commandements."
+        }
+      ],
+      "reflectionQuestion": "Quelle différence vis-tu entre obéir par peur et obéir par amour ?",
+      "relatedStudyIds": ["sabbat_001"]
+    }
+  ]
+}

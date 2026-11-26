@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "studyId": "bible_fiable_001",
+  "contentVersion": 1,
+  "locale": "fr",
+  "title": "La Bible est-elle fiable ?",
+  "subtitle": "Examen des manuscrits, de la cohérence et du témoignage interne",
+  "description": "Une enquête progressive sur l'origine, la transmission et la crédibilité des Écritures bibliques.",
+  "categoryId": "foundations",
+  "tags": ["bible", "manuscrits", "revelation", "fondations"],
+  "perspective": "SDA",
+  "difficulty": "BEGINNER",
+  "estimatedMinutes": 10,
+  "editorialStatus": "DEMO",
+  "startNodeId": "bf_node_1",
+  "prerequisiteStudyIds": [],
+  "metadata": {
+    "author": "Harimbola",
+    "reviewer": "Équipe éditoriale (démonstration)",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-01-01",
+    "license": "CC-BY-SA-4.0",
+    "bibliography": ["2 Timothée 3:16", "2 Pierre 1:20-21", "Luc 1:1-4"]
+  },
+  "nodes": [
+    {
+      "id": "bf_node_1",
+      "phase": "IRONY",
+      "type": "QUESTION",
+      "speakerText": "Lorsque l'on parle de la Bible comme d'un livre ancien copié pendant des siècles, quelle est ta première impression ?",
+      "contextText": "Cette étude distingue les données historiques sur les manuscrits, le témoignage des auteurs bibliques et ta propre évaluation.",
+      "instructionalText": "Choisis l'affirmation qui correspond le mieux à ton point de vue actuel.",
+      "verseReferences": [],
+      "choices": [
+        {
+          "id": "bf_c1",
+          "label": "Le texte a probablement été trop modifié au fil des siècles.",
+          "feedback": "C'est une question historique légitime. Examinons ce que montrent les sources et les textes eux-mêmes.",
+          "nextNodeId": "bf_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "bf_c2",
+          "label": "Je pense qu'elle est fiable, mais je ne sais pas exactement pourquoi.",
+          "feedback": "Cherchons ensemble des raisons solides, à la fois historiques et textuelles.",
+          "nextNodeId": "bf_node_2",
+          "kind": "STANDARD"
+        },
+        {
+          "id": "bf_c3",
+          "label": "Je ne connais pas la réponse",
+          "feedback": "Commencer sans a priori est une excellente posture d'enquête.",
+          "nextNodeId": "bf_node_2",
+          "kind": "DONT_KNOW"
+        }
+      ]
+    },
+    {
+      "id": "bf_node_2",
+      "phase": "ELENCHUS",
+      "type": "SCRIPTURE",
+      "speakerText": "Luc ouvre son Évangile en expliquant sa méthode de travail. Selon toi, écrit-il comme un conteur mythologique ou comme un enquêteur ?",
+      "contextText": "Luc s'adresse à Théophile vers le Ier siècle et mentionne des témoins oculaires encore vivants à son époque.",
+      "proposedInterpretation": "Dans la perspective adventiste, la révélation biblique s'ancre dans l'histoire réelle et vérifiable.",
+      "verseReferences": [
+        {
+          "bookId": "LUK",
+          "bookName": "Luc",
+          "chapter": 1,
+          "startVerse": 1,
+          "endVerse": 4,
+          "translationId": "LSG",
+          "quotedText": "Plusieurs ayant entrepris de composer un récit des événements qui se sont accomplis parmi nous, suivant ce que nous ont transmis ceux qui ont été des témoins oculaires dès le commencement et sont devenus des ministres de la parole, il m'a aussi semblé bon, après avoir fait des recherches exactes sur toutes ces choses depuis leur origine, de te les exposer par écrit d'une manière suivie, excellent Théophile, afin que tu reconnaisses la certitude des enseignements que tu as reçus.",
+          "licenseId": "PUBLIC_DOMAIN",
+          "contextSummary": "Prologue littéraire de l'Évangile selon Luc (LSG 1910)."
+        }
+      ],
+      "choices": [
+        {
+          "id": "bf_c4",
+          "label": "Il revendique une enquête historique auprès de témoins oculaires.",
+          "feedback": "Luc insiste sur des « recherches exactes » et une vérification auprès de témoins.",
+          "nextNodeId": "bf_node_3",
+          "kind": "STANDARD",
+          "unlockedNotion": "Méthode historique de Luc"
+        },
+        {
+          "id": "bf_c5",
+          "label": "Je veux examiner le contexte",
+          "feedback": "Les manuscrits de Qumrân (découverts en 1947) ont permis de comparer le texte d'Ésaïe copié 1000 ans plus tôt avec les manuscrits médiévaux : le sens doctrinal reste remarquablement préservé.",
+          "nextNodeId": null,
+          "kind": "EXAMINE_CONTEXT"
+        },
+        {
+          "id": "bf_c6",
+          "label": "Je ne suis pas convaincu",
+          "feedback": "La méthode d'un auteur ne prouve pas tout à elle seule ; examinons aussi comment les auteurs décrivent l'inspiration.",
+          "nextNodeId": "bf_node_3",
+          "kind": "NOT_CONVINCED"
+        }
+      ]
+    },
+    {
+      "id": "bf_node_3",
+      "phase": "MAIEUTICS",
+      "type": "QUESTION",
+      "speakerText": "Pierre précise que les prophéties n'ont pas été produites par la seule volonté humaine. Quelle tension vois-tu entre « auteurs humains » et « inspiration divine » ?",
+      "contextText": "2 Pierre 1:20-21 utilise l'image de personnes « poussées » (portées comme un navire par le vent) par le Saint-Esprit.",
+      "proposedInterpretation": "La théologie adventiste comprend l'inspiration comme une inspiration des personnes (pensées), non comme une dictée mécanique effaçant le style de chaque auteur.",
+      "verseReferences": [
+        {
+          "bookId": "2PE",
+          "bookName": "2 Pierre",
+          "chapter": 1,
+          "startVerse": 20,
+          "endVerse": 21,
+          "translationId": "LSG",
+          "quotedText": "Sachant tout d'abord vous-mêmes qu'aucune prophétie de l'Écriture ne peut être un objet d'interprétation particulière, car ce n'est pas par une volonté d'homme qu'une prophétie a jamais été apportée, mais c'est poussés par le Saint-Esprit que des hommes ont parlé de la part de Dieu.",
+          "licenseId": "PUBLIC_DOMAIN",
+          "contextSummary": "2 Pierre 1:20-21 sur l'origine de la parole prophétique."
+        },
+        {
+          "bookId": "2TI",
+          "bookName": "2 Timothée",
+          "chapter": 3,
+          "startVerse": 16,
+          "endVerse": 17,
+          "translationId": "LSG",
+          "quotedText": "Toute Écriture est inspirée de Dieu, et utile pour enseigner, pour convaincre, pour corriger, pour instruire dans la justice, afin que l'homme de Dieu soit accompli et propre à toute bonne œuvre.",
+          "licenseId": "PUBLIC_DOMAIN",
+          "contextSummary": "2 Timothée 3:16-17 sur l'utilité pratique des Écritures."
+        }
+      ],
+      "choices": [
+        {
+          "id": "bf_c7",
+          "label": "Dieu agit à travers la culture et le style de chaque écrivain.",
+          "feedback": "Cela explique pourquoi Luc écrit en médecin lettré et Amos en berger, tout en gardant une unité de message.",
+          "nextNodeId": "bf_node_4",
+          "kind": "STANDARD",
+          "unlockedNotion": "Inspiration des auteurs"
+        },
+        {
+          "id": "bf_c8",
+          "label": "Si des humains ont écrit, des erreurs de détail restent possibles à mes yeux.",
+          "feedback": "Cette prudence mérite respect. La comparaison des manuscrits et la cohérence globale restent essentielles.",
+          "nextNodeId": "bf_node_4",
+          "kind": "NOT_CONVINCED"
+        },
+        {
+          "id": "bf_c9",
+          "label": "Revenir à la question précédente",
+          "feedback": "",
+          "nextNodeId": null,
+          "kind": "PREVIOUS_QUESTION"
+        }
+      ]
+    },
+    {
+      "id": "bf_node_4",
+      "phase": "SYNTHESIS",
+      "type": "SYNTHESIS",
+      "speakerText": "Voici les éléments examinés jusqu'ici. Quelle conclusion te paraît la plus cohérente ?",
+      "contextText": "Prends le temps de distinguer les faits historiques (manuscrits, témoignages) de ta conviction personnelle.",
+      "proposedInterpretation": "Selon le principe Sola Scriptura, la Bible s'interprète par elle-même en comparant les passages dans leur contexte.",
+      "verseReferences": [],
+      "choices": [],
+      "conclusionId": "bf_conclusion_1",
+      "terminal": true
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "bf_conclusion_1",
+      "title": "Synthèse — Fiabilité des Écritures",
+      "summary": "La Bible se présente comme un ensemble de témoignages historiques écrits par des auteurs variés sur plus de quinze siècles, transmis avec un soin documenté par l'archéologie manuscrite.",
+      "reasoningSteps": [
+        "Luc revendique une enquête rigoureuse auprès de témoins oculaires (Luc 1:1-4).",
+        "Les auteurs bibliques affirment avoir été guidés par le Saint-Esprit sans perdre leur humanité (2 Pierre 1:20-21).",
+        "L'objectif déclaré des Écritures est pratique et moral : instruire dans la justice (2 Timothée 3:16-17)."
+      ],
+      "verseReferences": [
+        {
+          "bookId": "LUK",
+          "bookName": "Luc",
+          "chapter": 1,
+          "startVerse": 1,
+          "endVerse": 4,
+          "translationId": "LSG",
+          "quotedText": "…après avoir fait des recherches exactes sur toutes ces choses depuis leur origine…"
+        },
+        {
+          "bookId": "2PE",
+          "bookName": "2 Pierre",
+          "chapter": 1,
+          "startVerse": 21,
+          "endVerse": 21,
+          "translationId": "LSG",
+          "quotedText": "…c'est poussés par le Saint-Esprit que des hommes ont parlé de la part de Dieu."
+        }
+      ],
+      "reflectionQuestion": "Qu'est-ce qui te convainc ou te questionne encore concernant l'autorité de la Bible ?",
+      "relatedStudyIds": ["creation_001", "origine_mal_001"]
+    }
+  ],
+  "verseDuels": [
+    {
+      "id": "bf_duel_1",
+      "title": "Parole humaine ou Parole divine ?",
+      "passageA": {
+        "bookId": "LUK",
+        "bookName": "Luc",
+        "chapter": 1,
+        "startVerse": 3,
+        "endVerse": 3,
+        "translationId": "LSG",
+        "quotedText": "Il m'a aussi semblé bon, après avoir fait des recherches exactes sur toutes ces choses depuis leur origine, de te les exposer par écrit d'une manière suivie…"
+      },
+      "contextA": "Luc met en avant son initiative et sa recherche documentaire.",
+      "passageB": {
+        "bookId": "2PE",
+        "bookName": "2 Pierre",
+        "chapter": 1,
+        "startVerse": 21,
+        "endVerse": 21,
+        "translationId": "LSG",
+        "quotedText": "Car ce n'est pas par une volonté d'homme qu'une prophétie a jamais été apportée, mais c'est poussés par le Saint-Esprit que des hommes ont parlé de la part de Dieu."
+      },
+      "contextB": "Pierre insiste sur l'impulsion du Saint-Esprit.",
+      "analysisQuestion": "Comment ces deux affirmations peuvent-elles être vraies ensemble sans se contredire ?",
+      "suggestedSynthesis": "L'action divine ne supprime pas la recherche et la personnalité de l'écrivain ; elle les oriente."
+    }
+  ],
+  "investigation": {
+    "id": "bf_inv_1",
+    "centralQuestion": "Comment la Bible témoigne-t-elle de sa propre transmission ?",
+    "clues": [
+      {
+        "id": "bf_clue_1",
+        "testamentSection": "Évangiles",
+        "verseReference": {
+          "bookId": "LUK",
+          "bookName": "Luc",
+          "chapter": 1,
+          "startVerse": 1,
+          "endVerse": 4,
+          "translationId": "LSG",
+          "quotedText": "…ce que nous ont transmis ceux qui ont été des témoins oculaires dès le commencement…"
+        },
+        "observationPrompt": "Quelle source Luc utilise-t-il avant de rédiger ?",
+        "keyInsight": "Des témoins oculaires directs et une vérification chronologique."
+      },
+      {
+        "id": "bf_clue_2",
+        "testamentSection": "Épîtres",
+        "verseReference": {
+          "bookId": "2TI",
+          "bookName": "2 Timothée",
+          "chapter": 3,
+          "startVerse": 16,
+          "endVerse": 16,
+          "translationId": "LSG",
+          "quotedText": "Toute Écriture est inspirée de Dieu, et utile pour enseigner…"
+        },
+        "observationPrompt": "Dans quel but les Écritures ont-elles été préservées selon Paul ?",
+        "keyInsight": "Pour l'enseignement, la correction et la transformation morale."
+      }
+    ],
+    "synthesisPrompt": "À partir de ces indices, formule en une phrase ce que signifie « Sola Scriptura » pour toi."
+  }
+}
